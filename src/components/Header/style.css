@@ -25,7 +25,7 @@
 
 
 @media screen and (max-width: 699px) {
-    .nav__household, .nav__car, .nav__wallet  {
+    .nav__categories, .nav__notifications {
         display: none;
     }
 }
