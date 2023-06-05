@@ -1,0 +1,11 @@
+.footer {
+    grid-area: footer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-size: 0.7rem;
+    color: white;
+    letter-spacing: 0.2rem;
+}
