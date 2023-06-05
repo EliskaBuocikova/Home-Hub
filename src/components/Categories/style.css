@@ -1,0 +1,24 @@
+.main__categories {
+    grid-area: main;
+    overflow: auto;
+    display: grid;
+}
+
+.categories{
+    display: grid;
+    width: 25rem;
+    align-items: center;
+    gap: 1rem;
+    margin: 5rem auto 5rem auto;
+}
+
+.category {
+    background-color: #313134;
+    border-radius: 5px;
+    border-width: 0;
+    box-shadow: rgba(16, 13, 22, 0.4) 0 2px 4px,rgba(25, 20, 36, 0.3) 0 7px 13px -3px;
+    color: #dcdcdc;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+}
