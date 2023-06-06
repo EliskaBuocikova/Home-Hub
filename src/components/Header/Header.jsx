@@ -1,6 +1,4 @@
 import React from 'react';
-import bannerMobil from '../../img/banner-mobil.png';
-import backBanner from '../../img/banner-desktop.png';
 import './style.css';
 import logoWhite from '../../img/logo-H-bile.png';
 

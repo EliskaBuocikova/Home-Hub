@@ -31,7 +31,19 @@ img.ban__mobil {
     img.ban__mobil {
         display: none;
     }
+
     .header__logo {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 699px) {
+
+    .nav__categories,
+    .nav__notifications,
+    img.back__image {
         display: none;
     }
 }
