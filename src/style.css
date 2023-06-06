@@ -22,11 +22,12 @@ body {
   grid-area: main;
   overflow: auto;
   display: grid;
-  background-color:#dcdcdc;
+  background-image: url('/src/img/banner-desktop.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /*
-  background-image: url('/src/img/banner-desktop.png');
-  background-repeat:space;
-  background-size: contain;
+  
   */

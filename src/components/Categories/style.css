@@ -20,7 +20,7 @@
     font-size: 1.7rem;
     padding: 1.5rem;
     justify-self: center;
-    width: 60vw;
+    width: 25rem;
 }
 
 .category img {
@@ -41,7 +41,7 @@
         gap: 1rem;
         padding: 5rem 4rem;
         margin: 0 auto;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(235, 235, 235);
     }
 
     .category {
@@ -62,3 +62,4 @@
     }
 
 }
+
