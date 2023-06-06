@@ -10,14 +10,13 @@ const App = () => {
   return(
   
   <div className="container">
-  <Header/>
+      <Header/>
 
-  <main className="main">
-  <Categories/>
-  </main>
-  
-    
-  <Footer/>
+    <main className="main">
+      <Categories/>
+    </main>
+
+    <Footer/>
 
   </div>
   )
