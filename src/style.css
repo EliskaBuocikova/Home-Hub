@@ -18,3 +18,15 @@ body {
   height: 100vh;
 }
 
+.main {
+  grid-area: main;
+  overflow: auto;
+  display: grid;
+  background-color:#dcdcdc;
+}
+
+/*
+  background-image: url('/src/img/banner-desktop.png');
+  background-repeat:space;
+  background-size: contain;
+  */

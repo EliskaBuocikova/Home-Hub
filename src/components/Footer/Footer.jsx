@@ -3,6 +3,7 @@ import './style.css';
 import homeIcon from '../../img/home-icon.png';
 import notificationsIcon from '../../img/notifications-icon.png';
 
+
 const Footer = () => {
   return (
     <footer className="footer">

@@ -13,8 +13,7 @@
 }
 
 .header__logo {
-    margin: 0;
-    text-align: center;
+    width: 4rem;
 }
 
 .header__nav {
@@ -32,19 +31,7 @@ img.ban__mobil {
     img.ban__mobil {
         display: none;
     }
-}
-
-img.back__image {
-    width: 100%;
-}
-
-
-
-@media screen and (max-width: 699px) {
-
-    .nav__categories,
-    .nav__notifications,
-    img.back__image {
+    .header__logo {
         display: none;
     }
 }
