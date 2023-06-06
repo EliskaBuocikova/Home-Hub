@@ -11,30 +11,32 @@
     letter-spacing: 0.2rem;
 }
 
-.footer__text  {
+.footer__text {
     display: none;
 }
 
-.icon__home, .icon__notifications {
+.icon__home,
+.icon__notifications {
     width: 3rem;
 }
 
-.icon__home, .icon__notifications:hover{
+.icon__home,
+.icon__notifications:hover {
     cursor: pointer;
 }
 
 
 @media screen and (min-width: 700px) {
-    .footer{
+    .footer {
         justify-content: center;
     }
 
-    .footer__text{
+    .footer__text {
         display: block;
     }
 
-    .icon__home, .icon__notifications  {
+    .icon__home,
+    .icon__notifications {
         display: none;
     }
 }
-
