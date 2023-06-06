@@ -3,7 +3,7 @@
     height: 8vh;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-color: black;
     font-size: 0.7rem;
@@ -11,21 +11,29 @@
     letter-spacing: 0.2rem;
 }
 
-@media screen and (max-width: 699px) {
-    .footer__text  {
-        display: none;
-    }
-
-    .footer {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
+.footer__text  {
+    display: none;
 }
 
+.icon__home, .icon__notifications {
+    width: 3rem;
+}
+
+.icon__home, .icon__notifications:hover{
+    cursor: pointer;
+}
+
+
 @media screen and (min-width: 700px) {
+    .footer{
+        justify-content: center;
+    }
+
+    .footer__text{
+        display: block;
+    }
+
     .icon__home, .icon__notifications  {
         display: none;
     }
-
 }

@@ -11,8 +11,12 @@ const App = () => {
   
   <div className="container">
   <Header/>
-  <Categories/>
 
+  <main className="main">
+  <Categories/>
+  </main>
+  
+    
   <Footer/>
 
   </div>

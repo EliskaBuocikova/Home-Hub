@@ -13,8 +13,7 @@
 }
 
 .header__logo {
-    margin: 0;
-    text-align: center;
+    width: 4rem;
 }
 
 .header__nav {
@@ -26,6 +25,9 @@
 
 @media screen and (max-width: 699px) {
     .nav__categories, .nav__notifications {
+        display: none;
+    }
+    .header__logo {
         display: none;
     }
 }
