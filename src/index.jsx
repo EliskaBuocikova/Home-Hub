@@ -30,6 +30,7 @@ const App = () => {
         <Footer />
       </div>
     </Router>
+>>>>>>> edaade4de1075c113181bb3e4961b700cf78fee8
   );
 };
 
