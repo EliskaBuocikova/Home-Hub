@@ -42,8 +42,7 @@ img.ban__mobil {
 @media screen and (max-width: 699px) {
 
     .nav__categories,
-    .nav__notifications,
-    img.back__image {
+    .nav__notifications{
         display: none;
     }
 }
