@@ -24,8 +24,7 @@
 
 @media screen and (max-width: 699px) {
 
-    .nav__categories,
-    .nav__notifications {
+    .header__menu {
         display: none;
     }
 }
