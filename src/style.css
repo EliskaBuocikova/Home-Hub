@@ -12,9 +12,9 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 8vh 1fr 8vh;
   grid-template-areas:
-      'header'
-      'main'
-      'footer';
+    'header'
+    'main'
+    'footer';
   height: 100vh;
 }
 
@@ -28,6 +28,9 @@ body {
   background-repeat: no-repeat;
 }
 
-/*
-  
-  */
+@media screen and (max-width: 699px) {
+
+  .main {
+    background-image: none;
+  }
+}

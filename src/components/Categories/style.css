@@ -33,7 +33,7 @@
 
 @media screen and (min-width: 700px) {
 
-    .categories {
+    /* .categories {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(14vw, 1fr));
         width: 50vw;
@@ -59,7 +59,6 @@
         justify-self: center;
         justify-content: center;
         aspect-ratio: 1/1;
-    }
+    } */
 
 }
-
