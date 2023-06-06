@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <div className="banner">
       <div className="banner__img"></div>
-      <div className="siteName"></div>
+      <div className="siteName"> </div>
     </div>
   );
 };

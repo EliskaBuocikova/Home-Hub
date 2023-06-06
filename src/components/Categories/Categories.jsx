@@ -3,9 +3,9 @@ import './style.css';
 import Banner from '../Banner/Banner.jsx';
 import appliancesIcon from '../../img/appliances-icon-T.png';
 import electronicsIcon from '../../img/electronics-icon-T.png';
-import carIcon from '../../img/car-icon.png';
-import walletIcon from '../../img/wallet-icon.png';
-import othersIcon from '../../img/others-icon.png';
+import carIcon from '../../img/car-icon-T.png';
+import walletIcon from '../../img/wallet-icon-T.png';
+import othersIcon from '../../img/others-icon-T.png';
 
 const Categories = () => {
   return (
