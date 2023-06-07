@@ -4,7 +4,7 @@ import './style.css';
 const History = () => {
   return (
     <div className="historyBox">
-      <h1>History</h1>;
+      <h1>History</h1>
     </div>
   );
 };

@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'fontPoppin';
+  src: url('../public/Poppins-font/Poppins-Medium.ttf');
+}
+
 body {
   margin: 0;
   padding: 0;
