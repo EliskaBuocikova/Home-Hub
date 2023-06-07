@@ -1,0 +1,13 @@
+h1 {
+  background-color: #2A2929;
+  color: #dcdcdc;
+  text-align: center;
+  margin: 0;
+  height: 2em;
+  line-height: 2em;
+  position: sticky;
+  top: 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: normal;
+}

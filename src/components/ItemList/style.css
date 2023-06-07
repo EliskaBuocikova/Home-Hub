@@ -1,0 +1,107 @@
+html {
+  box-sizing: border-box;
+}
+
+.item-list {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5rem 0;
+  background-color: #dcdcdc;
+  gap: 1rem;
+  align-items: center;
+  width: 60vw;
+  height: 100vh;
+}
+
+input {
+  background-color: black;
+  border: none;
+  margin: 3px;
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 1rem;
+  color: #dcdcdc;
+}
+
+.item-list__folders {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50vw;
+  margin-left: 40px;
+}
+
+.item-list__item {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  align-items: center;
+  flex-basis: calc(100%/3);
+}
+
+.item-list__item:hover img {
+  animation: shake 0.3s;
+}
+
+.item-list__folder-pic {
+  height: 5rem;
+  width: 5rem;
+}
+
+.item-list__folder-add-pic {
+  height: 6rem;
+  width: 5.5rem;
+}
+
+.item-list__folder-add-pic:hover {
+  animation: shake 0.3s;
+}
+
+.item-list__item-name {
+  font-style: normal;
+  background-color: #313134;
+  margin-top: 0.5em;
+  color: #dcdcdc;
+  border-radius: 5px;
+  padding: 0.1em;
+  width: 5rem;
+}
+
+
+.magnifying-glass-icon {
+  background-color: black;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+.magnifying-glass-pic {
+  height: 18px;
+  width: 18px;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateX(5px) rotate(5deg);
+  }
+
+  75% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
