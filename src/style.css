@@ -1,11 +1,13 @@
-* {
-  box-sizing: border-box;
-}
-
 @font-face {
   font-family: 'fontPoppin';
-  src: url('../public/Poppins-font/Poppins-Medium.ttf');
+  src: url('../public/Poppins-font/Poppins-Regular.ttf');
 }
+
+* {
+  box-sizing: border-box;
+  font-family: 'fontPoppin';
+}
+
 
 body {
   margin: 0;
