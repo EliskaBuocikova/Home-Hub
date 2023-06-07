@@ -10,6 +10,7 @@ import Login from './components/Login/Login.jsx';
 import HomePage from './components/HomePage/HomePage';
 import Categories from './components/Categories/Categories';
 import ItemList from './components/ItemList/ItemList.jsx';
+import History from './components/History/History';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
             <Route path="/itemlist" element={<ItemList />} />
             <Route path="/login" element={<Login />} />
             <Route path="/homepage" element={<HomePage />} />
+            <Route path="/history" element={<History />} />
           </Routes>
         </main>
 

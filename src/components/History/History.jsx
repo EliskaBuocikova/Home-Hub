@@ -1,7 +1,12 @@
 import React from 'react';
+import './style.css';
 
 const History = () => {
-  return <h1>History</h1>;
+  return (
+    <div className="historyBox">
+      <h1>History</h1>;
+    </div>
+  );
 };
 
 export default History;
