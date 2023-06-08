@@ -22,8 +22,8 @@
   animation: shimmering 3.1s linear infinite;
   background: linear-gradient(90deg, rgba(226, 226, 226, 1) 9%, rgba(238, 238, 238, 1) 18%, rgba(226, 226, 226, 1)31%);
   background-size: 1300px 100%;
+  position: relative;
 }
-
 
 .boxForm {
   height: 50vh;
@@ -33,4 +33,34 @@
   flex-direction: column;
   justify-content: space-around;
 
+}
+
+.close {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background-color: #313134;
+  border-radius: 5px;
+  top: 0.5em;
+  right: 0.5em;
+}
+
+.close::before,
+.close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  background-color: #dcdcdc;
+}
+
+.close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }

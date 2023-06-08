@@ -15,6 +15,7 @@ const Form = () => {
           <img src={pdficon} alt="add-pdf" />
           <button className="">add item</button>
         </form>
+        <button className="close"></button>
       </div>
       ;
     </>
