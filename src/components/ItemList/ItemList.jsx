@@ -8,7 +8,7 @@ import './style.css';
 const ItemList = ({ name }) => {
   return (
     <>
-      <PageName title="List of items" />
+      <PageName title={'List of items'} />
       <div className="item-list">
         <form>
           <input type="text" placeholder="search" />

@@ -1,16 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PageName from '../PageName/PageName';
+import Banner from '../Banner/Banner.jsx';
 import './style.css';
 
 const History = () => {
-  //const [doneNotifications, setDoneNotifications] = useState();
-
   return (
-    <div className="historyBox">
-      <h2>Moje upomínky</h2>
-      <ul>
-        <li>{doneNotifications}</li>{' '}
-      </ul>
-    </div>
+    <>
+      <Banner />
+      <PageName title={'Homepage'} />
+      <div className="historyBox">
+        <h2>Moje upomínky</h2>
+        <ul>
+          <li></li>{' '}
+        </ul>
+      </div>
+    </>
   );
 };
 

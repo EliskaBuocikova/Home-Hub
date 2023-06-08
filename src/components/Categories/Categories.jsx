@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import PageName from '../PageName/PageName';
 import Banner from '../Banner/Banner.jsx';
 import appliancesIcon from '../../img/appliances-icon-T.png';
 import electronicsIcon from '../../img/electronics-icon-T.png';
@@ -11,7 +12,7 @@ const Categories = () => {
   return (
     <>
       <Banner />
-
+      <PageName title={'Categories'} />
       <div className="categories">
         <div className="category" id="appliances">
           <img

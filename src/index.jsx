@@ -1,6 +1,5 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import './style.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Header from './components/Header/Header.jsx';
@@ -12,6 +11,9 @@ import Categories from './components/Categories/Categories';
 import ItemList from './components/ItemList/ItemList.jsx';
 import History from './components/History/History';
 import Form from './components/Form/Form';
+
+import './style.css';
+
 
 const App = () => {
   return (

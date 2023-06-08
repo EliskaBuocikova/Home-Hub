@@ -1,7 +1,15 @@
 import React from 'react';
+import PageName from '../PageName/PageName';
+import Banner from '../Banner/Banner.jsx';
+import './style.css';
 
 const HomePage = () => {
-  return <h1>Home Page</h1>;
+  return (
+    <>
+      <Banner />
+      <PageName title={'Homepage'} />
+    </>
+  );
 };
 
 export default HomePage;
