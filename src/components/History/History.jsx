@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 
 const History = () => {
+  const [doneNotifications, setDoneNotifications] = useState();
+
   return (
     <div className="historyBox">
-      <h1>History</h1>
+      <h2>Moje upomínky</h2>
+      <ul>
+        <li>{doneNotifications}</li>{' '}
+      </ul>
     </div>
   );
 };
