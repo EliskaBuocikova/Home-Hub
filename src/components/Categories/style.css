@@ -3,8 +3,10 @@
     align-items: center;
     gap: 1rem;
     background-color: #dcdcdc;
-    padding: 5rem 0;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     margin: 0 auto;
+    margin-top: 2rem;
 }
 
 .category {
@@ -16,14 +18,14 @@
     border-radius: 5px;
     box-shadow: rgba(16, 13, 22, 0.4) 0 2px 4px, rgba(25, 20, 36, 0.3) 0 7px 13px -3px;
     color: #dcdcdc;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     padding: 0.8rem;
     justify-self: center;
     width: 20rem;
 }
 
 .category img {
-    width: 3.5rem;
+    width: 3rem;
 }
 
 .category:hover {

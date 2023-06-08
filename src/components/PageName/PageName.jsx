@@ -2,7 +2,11 @@ import React from 'react';
 import './style.css';
 
 const PageName = ({ title }) => {
-  return <h1>{title}</h1>;
+  return (
+    <div className="pageName">
+      <h1>{title}</h1>
+    </div>
+  )
 };
 
 export default PageName;

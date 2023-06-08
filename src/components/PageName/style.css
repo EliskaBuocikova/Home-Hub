@@ -1,4 +1,6 @@
-h1 {
+.pageName {
+  display: flex;
+  justify-content: center;
   background-color: #2A2929;
   color: #dcdcdc;
   text-align: center;
@@ -6,8 +8,15 @@ h1 {
   height: 2em;
   line-height: 2em;
   position: sticky;
-  top: 0;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: normal;
+  align-self: start;
+  height: 3rem;
 }
+
+.pageName h1 {
+  margin: 0;
+  padding: 0.5rem;
+}
+
