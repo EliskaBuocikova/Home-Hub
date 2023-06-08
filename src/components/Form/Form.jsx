@@ -6,13 +6,12 @@ const Form = () => {
   return (
     <>
       <div className="formcontainer">
-        <h2>Form</h2>
         <form className="boxForm">
-          <h3>New item</h3>
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
+          <h2>New item</h2>
+          <input type="text" placeholder="name" />
+          <input type="text" placeholder="date of purchase" />
+          <input type="text" placeholder="reminder date" />
+          <input type="text" placeholder="note" />
           <img src={pdficon} alt="add-pdf" />
           <button className="">add item</button>
         </form>
