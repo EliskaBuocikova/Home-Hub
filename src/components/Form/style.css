@@ -1,3 +1,14 @@
+@keyframes shimmering {
+  0% {
+    background-position: -1300px 0;
+  }
+
+  100% {
+    background-position: 1300px 0;
+  }
+}
+
+
 .formcontainer {
   margin: 0 auto;
   display: flex;
@@ -8,7 +19,11 @@
   gap: 1rem;
   align-items: center;
   width: 60vw;
+  animation: shimmering 3.1s linear infinite;
+  background: linear-gradient(90deg, rgba(226, 226, 226, 1) 9%, rgba(238, 238, 238, 1) 18%, rgba(226, 226, 226, 1)31%);
+  background-size: 1300px 100%;
 }
+
 
 .boxForm {
   height: 50vh;
@@ -17,4 +32,5 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
+
 }
