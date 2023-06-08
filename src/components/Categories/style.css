@@ -1,6 +1,5 @@
 .categories {
     display: grid;
-    width: 60vw;
     align-items: center;
     gap: 1rem;
     background-color: #dcdcdc;
@@ -18,9 +17,9 @@
     box-shadow: rgba(16, 13, 22, 0.4) 0 2px 4px, rgba(25, 20, 36, 0.3) 0 7px 13px -3px;
     color: #dcdcdc;
     font-size: 1.7rem;
-    padding: 1.5rem;
+    padding: 0.8rem;
     justify-self: center;
-    width: 25rem;
+    width: 20rem;
 }
 
 .category img {
@@ -32,6 +31,15 @@
 }
 
 @media screen and (min-width: 700px) {
+
+    .categories {
+        width: 60vw;
+    }
+
+    .category {
+        width: 25rem;
+        padding: 1rem;
+    }
 
     /* .categories {
         display: grid;
