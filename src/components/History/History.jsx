@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './style.css';
 
 const History = () => {
-  const [doneNotifications, setDoneNotifications] = useState();
+  //const [doneNotifications, setDoneNotifications] = useState();
 
   return (
     <div className="historyBox">
