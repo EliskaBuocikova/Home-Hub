@@ -11,6 +11,7 @@ import HomePage from './components/HomePage/HomePage';
 import Categories from './components/Categories/Categories';
 import ItemList from './components/ItemList/ItemList.jsx';
 import History from './components/History/History';
+import Form from './components/Form/Form';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/homepage" element={<HomePage />} />
             <Route path="/history" element={<History />} />
+            <Route path="/form" element={<Form />} />
           </Routes>
         </main>
 
