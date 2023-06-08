@@ -1,0 +1,120 @@
+.item-detail__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #dcdcdc;
+  width: 60vw;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.item-detail__label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input__date-of-purchase,
+.input__reminder-date,
+.input__note {
+  color: #dcdcdc;
+}
+
+.button-save {
+  color: white;
+  background-color: black;
+  width: 100px;
+  height: 30px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  align-items: center;
+}
+
+.button-edit,
+.button-delete {
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: white;
+  width: 100px;
+  height: 30px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.editable-field {
+  background-image: url('pencil-icon.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 30px 30px;
+  padding-right: 20px;
+  /* Zajišťuje místo pro ikonu tužky */
+}
+
+.close {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background-color: #313134;
+  border-radius: 5px;
+  top: 0.5em;
+  right: 0.5em;
+}
+
+.close::before,
+.close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  background-color: #dcdcdc;
+}
+
+.close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.6s;
+}

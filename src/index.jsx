@@ -11,9 +11,9 @@ import Categories from './components/Categories/Categories';
 import ItemList from './components/ItemList/ItemList.jsx';
 import History from './components/History/History';
 import Form from './components/Form/Form';
+import ItemDetail from './components/ItemDetail/ItemDetail.jsx';
 
 import './style.css';
-
 
 const App = () => {
   return (
@@ -30,6 +30,7 @@ const App = () => {
             <Route path="/homepage" element={<HomePage />} />
             <Route path="/history" element={<History />} />
             <Route path="/form" element={<Form />} />
+            <Route path="/itemdetail" element={<ItemDetail />} />
           </Routes>
         </main>
 
