@@ -3,6 +3,7 @@ import PageName from '../PageName/PageName';
 import folderIcon from '../../img/folder-icon.svg';
 import folderAddIcon from '../../img/folder-add-icon.svg';
 import magnifyingGlassIcon from '../../img/magnifying-glass-icon.png';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 const ItemList = ({ name }) => {
@@ -17,11 +18,11 @@ const ItemList = ({ name }) => {
           </button>
         </form>
         <div className="item-list__folders">
-          <div className="item-list__item">
+          <Link className="item-list__item" to="/itemdetail">
             <img className="item-list__folder-pic" src={folderIcon} />
             <p className="item-list__item-name">lednice{name}</p>
-          </div>
-          <div className="item-list__item">
+          </Link>
+          {/* <div className="item-list__item">
             <img className="item-list__folder-pic" src={folderIcon} />
             <p className="item-list__item-name">mixér{name}</p>
           </div>
@@ -44,11 +45,11 @@ const ItemList = ({ name }) => {
           <div className="item-list__item">
             <img className="item-list__folder-pic" src={folderIcon} />
             <p className="item-list__item-name">nevim 2{name}</p>
-          </div>
+          </div> */}
 
-          <div className="item-list__item">
+          <Link className="item-list__item" to="/form">
             <img className="item-list__folder-add-pic" src={folderAddIcon} />
-          </div>
+          </Link>
         </div>
       </div>
     </>
