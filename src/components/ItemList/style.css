@@ -7,12 +7,13 @@ html {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 5rem 0;
+  padding: 3rem 0;
   background-color: #dcdcdc;
   gap: 1rem;
   align-items: center;
   width: 60vw;
-  height: 100vh;
+  overflow: hidden;
+  flex-grow: 1;
 }
 
 input {
@@ -42,32 +43,38 @@ input {
   flex-basis: calc(100%/3);
 }
 
-.item-list__item:hover img {
-  animation: shake 0.2s;
-}
-
 .item-list__folder-pic {
   height: 5rem;
   width: 5rem;
+  transition: transform 0.5s ease;
+}
+
+.item-list__folder-pic:hover {
+  transform: scale(1.2);
 }
 
 .item-list__folder-add-pic {
-  height: 6rem;
-  width: 5.5rem;
+  height: 5rem;
+  width: 5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  transition: transform 0.5s ease;
 }
 
 .item-list__folder-add-pic:hover {
-  animation: shake 0.3s;
+  transform: scale(1.2);
 }
 
 .item-list__item-name {
   font-style: normal;
   background-color: #313134;
-  margin-top: 0.5em;
+  margin-top: 0.1em;
+  margin-bottom: 0.3em;
   color: #dcdcdc;
   border-radius: 5px;
   padding: 0.1em;
-  width: 5rem;
+  width: 4.3rem;
+  font-size: 12px;
 }
 
 /* FORM */
@@ -93,26 +100,4 @@ input {
 .magnifying-glass-pic {
   
   width: 1.5rem;
-}
-
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-
-  25% {
-    transform: translateX(-5px) rotate(-5deg);
-  }
-
-  50% {
-    transform: translateX(5px) rotate(5deg);
-  }
-
-  75% {
-    transform: translateX(-5px) rotate(-5deg);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
 }
