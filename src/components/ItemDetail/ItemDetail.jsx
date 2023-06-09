@@ -1,14 +1,36 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
+import { useEffect } from 'react';
+
+import { getItemDetails } from '../../functions/formItem';
+
+getItemDetails().then((Response) => {
+  console.log(Response);
+});
+//tady získáme v konzoli itemy z databáze.
 
 const ItemDetail = ({ name }) => {
-  const [dateOfPurchase, setDateOfPurchase] = useState('08/06/23');
-  const [reminderDate, setReminderDate] = useState('08/06/25');
-  const [note, setNote] = useState('lorem ipsum');
+  const [dateOfPurchase, setDateOfPurchase] = useState('');
+  const [reminderDate, setReminderDate] = useState('');
+  const [note, setNote] = useState('');
   const [isEditable, setIsEditable] = useState(false);
   const [shouldShake, setShouldShake] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  useEffect(() => {
+    getItemDetails().then((response) => {
+      const itemDetails = response.data;
+      if (itemDetails.length > 0) {
+        const item = itemDetails[0];
+
+        setDateOfPurchase(item.dateOfPurchase);
+        setReminderDate(item.reminderDate);
+        setNote(item.note);
+      }
+    });
+  }, []);
+  // ue volá funkci getItemDet. která vrací promise. Pokud je promise vyřešeno => then dostaneme response z databáze.
 
   const handleEdit = () => {
     setIsEditable(true);
