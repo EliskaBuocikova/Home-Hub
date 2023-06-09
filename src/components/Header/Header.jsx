@@ -18,7 +18,9 @@ const Header = () => {
           </Link>
         </nav>
       </div>
-      <p className="header__login">login</p>
+      <Link className="header__login" to="/login">
+        login
+      </Link>
     </header>
   );
 };

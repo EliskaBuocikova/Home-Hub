@@ -22,6 +22,14 @@
     flex: 0 1 25rem;
 }
 
+.header__login {
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 
 /* MENU EFFECTS */
 
@@ -31,12 +39,10 @@
     color: white;
 }
 
-.nav__categories::before,
-.nav__categories::after {
-
-    opacity: 1;
-    transform: translateX(0px);
-
+.nav__notifications::before  {
+    margin-right: 10px;
+    content: '[';
+    transform: translateX(20px);
 }
 
 .nav__notifications::before,
@@ -47,10 +53,7 @@
 }
 
 
-.nav__notifications:hover::after,
-.nav__categories:focus::after,
-.nav__categories:hover::after,
-.nav__notifications:focus::after {
+.nav__notifications::after, .nav__categories::after {
     margin-left: 10px;
     content: ']';
     transform: translateX(-20px);
