@@ -17,14 +17,14 @@
 
 .icon__home,
 .icon__notifications {
-    width: 3rem;
+    width: 2.5rem;
+    max-height: 8vh;
 }
 
 .icon__home,
 .icon__notifications:hover {
     cursor: pointer;
 }
-
 
 @media screen and (min-width: 700px) {
     .footer {
