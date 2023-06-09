@@ -12,7 +12,6 @@ const Header = () => {
           <Link className="link__ nav__notifications" to="/">
             Notifications
           </Link>
-          <span> | </span>
           <Link className="nav__categories" to="/categories">
             Categories
           </Link>
