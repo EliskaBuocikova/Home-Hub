@@ -1,6 +1,7 @@
 import React from 'react';
-import './style.css';
+import { Link } from 'react-router-dom';
 import attachmentIcon from '../../img/attachment-icon.svg';
+import './style.css';
 
 const Form = () => {
   const handleAddAttachment = () => {
@@ -31,7 +32,10 @@ const Form = () => {
             add item
           </button>
         </form>
-        <button className="close"></button>
+        <Link to="/itemlist">
+          {' '}
+          <button className="close"></button>
+        </Link>
       </div>
       ;
     </>
