@@ -7,10 +7,36 @@ const ItemDetail = ({ name }) => {
   const [note, setNote] = useState('lorem ipsum');
   const [isEditable, setIsEditable] = useState(false);
   const [shouldShake, setShouldShake] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleEdit = () => {
     setIsEditable(true);
     setShouldShake(true);
+  };
+
+  const Modal = ({ isOpen, onClose, onDelete, name }) => {
+    return (
+      <div className={`modal ${isOpen ? 'open' : ''}`}>
+        <div className="modal-content">
+          <p>{`Opravdu chcete položku ${name} smazat?`}</p>
+          <button onClick={onClose}>Cancel</button>
+          <button onClick={onDelete}>Delete</button>
+        </div>
+      </div>
+    );
+  };
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  const handleDelete = () => {
+    // Tady bude funkce, která se stane na smazání.
+    setModalIsOpen(false);
   };
 
   return (
@@ -69,8 +95,17 @@ const ItemDetail = ({ name }) => {
           {isEditable ? (
             <button className="button-save">save</button>
           ) : (
-            <button className="button-delete">delete</button>
+            <button onClick={openModal} className="button-delete">
+              delete
+            </button>
           )}
+
+          <Modal
+            isOpen={modalIsOpen}
+            onClose={closeModal}
+            onDelete={handleDelete}
+            name="název"
+          />
         </div>
         <button className="close"></button>
       </div>

@@ -42,7 +42,7 @@ input {
 }
 
 .item-list__item:hover img {
-  animation: shake 0.3s;
+  animation: shake 0.2s;
 }
 
 .item-list__folder-pic {
