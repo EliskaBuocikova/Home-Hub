@@ -2,8 +2,15 @@ import React from 'react';
 import './style.css';
 import Banner from '../Banner/Banner';
 import logo from '../../img/logo-cele-cerne.png';
+import { useState } from 'react';
 
 const Login = () => {
+  const [showRegister, setShowRegister] = useState(false);
+
+  const handleClickRegister = () => {
+    setShowRegister(true);
+  };
+
   return (
     <>
       <Banner />
@@ -22,10 +29,23 @@ const Login = () => {
         </form>
         <footer>
           <p className="login__question">Don't have an account?</p>
-          <p className="login__link">
-            Register <a href="#"> HERE</a>
-          </p>
+          {!showRegister && (
+            <p className="login__link" onClick={handleClickRegister}>
+              Register{' '}
+              <a className="register" href="#">
+                {' '}
+                HERE
+              </a>
+            </p>
+          )}
         </footer>
+        {showRegister && (
+          <form className="registration__form">
+            <input type="text" placeholder="user name" />
+            <input type="text" placeholder="password" />
+            <button className="registration__button">Register</button>
+          </form>
+        )}
       </div>
     </>
   );
