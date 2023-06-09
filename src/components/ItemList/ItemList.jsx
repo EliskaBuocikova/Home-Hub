@@ -22,7 +22,8 @@ const ItemList = ({ name }) => {
             <img className="item-list__folder-pic" src={folderIcon} />
             <p className="item-list__item-name">lednice{name}</p>
           </Link>
-          {/* <div className="item-list__item">
+
+          <div className="item-list__item">
             <img className="item-list__folder-pic" src={folderIcon} />
             <p className="item-list__item-name">mixér{name}</p>
           </div>
@@ -45,7 +46,7 @@ const ItemList = ({ name }) => {
           <div className="item-list__item">
             <img className="item-list__folder-pic" src={folderIcon} />
             <p className="item-list__item-name">nevim 2{name}</p>
-          </div> */}
+          </div>
 
           <Link className="item-list__item" to="/form">
             <img className="item-list__folder-add-pic" src={folderAddIcon} />
