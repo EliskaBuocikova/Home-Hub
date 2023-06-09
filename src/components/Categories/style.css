@@ -33,6 +33,10 @@
     cursor: pointer;
 }
 
+.notifications__history {
+    text-decoration: none;
+}
+
 @media screen and (min-width: 700px) {
 
     .categories {
