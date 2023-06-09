@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 const ItemDetail = ({ name }) => {
@@ -108,7 +109,9 @@ const ItemDetail = ({ name }) => {
             name="název"
           />
         </div>
-        <button className="close"></button>
+        <Link to="/itemlist">
+          <button className="close"></button>
+        </Link>
       </div>
     </>
   );
