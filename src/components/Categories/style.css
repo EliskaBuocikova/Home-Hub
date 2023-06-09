@@ -10,9 +10,8 @@
 }
 
 .category {
-    display: flex;
-    justify-content: left;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: 20% 50%;
     align-items: center;
     background-color: #313134;
     border-radius: 5px;
@@ -23,6 +22,8 @@
     justify-self: center;
     width: 20rem;
     text-decoration: none;
+    gap: 1rem;
+    text-align: center;
 }
 
 .category img {

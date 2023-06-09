@@ -10,37 +10,37 @@ const HomePage = () => {
       <Banner />
       <PageName title={'Reminders'} />
 
-      <div class="homepage__container">
-        <h2 class="homepage__datetime">Today is Monday, 12 June 2023</h2>
-        <p class="homepage__prompt">What's coming up in the next two months?</p>
+      <div className="homepage__container">
+        <h2 className="homepage__datetime">Today is Monday, 12 June 2023</h2>
+        <p className="homepage__prompt">What's coming up in the next two months?</p>
       </div>
 
       <div className="notifications__wrapper">
         <div className="notifications">
-          <div class="notification">
-            <p class="notification__date">12.3.</p>
-            <p class="notification__text">Záruka pračka</p>
-            <div class="notification__tick"></div>
+          <div className="notification">
+            <p className="notification__date">12.3.</p>
+            <p className="notification__text">Záruka pračka</p>
+            <div className="notification__tick"></div>
           </div>
-          <div class="notification">
-            <p class="notification__date">12.3.</p>
-            <p class="notification__text">Záruka pračka</p>
-            <div class="notification__tick"></div>
+          <div className="notification">
+            <p className="notification__date">12.3.</p>
+            <p className="notification__text">Záruka pračka</p>
+            <div className="notification__tick"></div>
           </div>
-          <div class="notification">
-            <p class="notification__date">12.3.</p>
-            <p class="notification__text">Záruka pračka</p>
-            <div class="notification__tick"></div>
+          <div className="notification">
+            <p className="notification__date">12.3.</p>
+            <p className="notification__text">Záruka pračka</p>
+            <div className="notification__tick"></div>
           </div>
-          <div class="notification">
-            <p class="notification__date">12.3.</p>
-            <p class="notification__text">Záruka pračka</p>
-            <div class="notification__tick"></div>
+          <div className="notification">
+            <p className="notification__date">12.3.</p>
+            <p className="notification__text">Záruka pračka</p>
+            <div className="notification__tick"></div>
           </div>
-          <div class="notification">
-            <p class="notification__date">12.3.</p>
-            <p class="notification__text">Záruka pračka</p>
-            <div class="notification__tick"></div>
+          <div className="notification">
+            <p className="notification__date">12.3.</p>
+            <p className="notification__text">Záruka pračka</p>
+            <div className="notification__tick"></div>
           </div>
           <Link className="notifications__history" to="/history">
             History
