@@ -2,9 +2,19 @@ html {
   box-sizing: border-box;
 }
 
-a.register {
-  color: black;
+.login__logo {
+  height: 10rem;
+  width: 10rem;
 }
+
+.login__text {
+  margin-top: 0;
+  letter-spacing: 5px;
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+
 
 .login__form {
   display: flex;
@@ -22,12 +32,10 @@ a.register {
   gap: 1rem;
   align-items: center;
   width: 60vw;
+  height: 100vh;
 }
 
-.login__logo {
-  height: 10rem;
-  width: 10rem;
-}
+
 
 input {
   background-color: black;
@@ -48,12 +56,17 @@ input {
   height: 30px;
   left: 136px;
   top: 578px;
-
+  text-decoration: none;
 
 }
 
 .login__link {
   margin-bottom: 0;
 }
+
+a.register {
+  color: black;
+}
+
 
 @media screen and (max-width: 699px) {}
