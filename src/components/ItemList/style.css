@@ -20,7 +20,7 @@ input {
   border: none;
   margin: 3px;
   width: 250px;
-  height: 40px;
+  height: 2.5rem;
   border-radius: 5px;
   padding: 1rem;
   color: #dcdcdc;
@@ -31,6 +31,7 @@ input {
   flex-wrap: wrap;
   width: 50vw;
   margin-left: 40px;
+  margin-top: 2rem;
 }
 
 .item-list__item {
@@ -69,19 +70,29 @@ input {
   width: 5rem;
 }
 
+/* FORM */
+
+.item-list form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
 .magnifying-glass-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: black;
-  height: 40px;
-  width: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   cursor: pointer;
   border-radius: 5px;
 
 }
 
 .magnifying-glass-pic {
-  height: 18px;
-  width: 18px;
+  
+  width: 1.5rem;
 }
 
 @keyframes shake {
