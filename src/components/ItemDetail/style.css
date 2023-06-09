@@ -52,12 +52,11 @@
 }
 
 .editable-field {
-  background-image: url('pencil-icon.svg');
+  background-image: url('pencil-icon2.svg');
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 30px 30px;
-  padding-right: 20px;
-  /* Zajišťuje místo pro ikonu tužky */
+  padding-right: 30px;
 }
 
 .close {

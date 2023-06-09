@@ -7,12 +7,10 @@ const ItemDetail = ({ name }) => {
   const [reminderDate, setReminderDate] = useState('08/06/25');
   const [note, setNote] = useState('lorem ipsum');
   const [isEditable, setIsEditable] = useState(false);
-  const [shouldShake, setShouldShake] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleEdit = () => {
     setIsEditable(true);
-    setShouldShake(true);
   };
 
   const Modal = ({ isOpen, onClose, onDelete, name }) => {
@@ -52,7 +50,7 @@ const ItemDetail = ({ name }) => {
             <input
               className={`input__date-of-purchase ${
                 isEditable ? 'editable-field' : ''
-              } ${shouldShake ? 'shake' : ''}`}
+              }`}
               type="text"
               value={dateOfPurchase}
               placeholder="date of purchase"
@@ -66,7 +64,7 @@ const ItemDetail = ({ name }) => {
             <input
               className={`input__reminder-date ${
                 isEditable ? 'editable-field' : ''
-              } ${shouldShake ? 'shake' : ''}`}
+              }`}
               type="text"
               value={reminderDate}
               placeholder="reminder date"
@@ -78,9 +76,7 @@ const ItemDetail = ({ name }) => {
           <label className="item-detail__label">
             Note:
             <input
-              className={`input__note ${isEditable ? 'editable-field' : ''} ${
-                shouldShake ? 'shake' : ''
-              }`}
+              className={`input__note ${isEditable ? 'editable-field' : ''}`}
               type="text"
               value={note}
               placeholder="note"
