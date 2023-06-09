@@ -1,8 +1,17 @@
 import React from 'react';
 import './style.css';
-import pdficon from '../../img/icon-pdf.png';
+import attachmentIcon from '../../img/attachment-icon.svg';
 
 const Form = () => {
+  const handleAddAttachment = () => {
+    console.log('funkce na přidání PŘÍLOHY');
+  };
+
+  const handleAddItem = (event) => {
+    event.preventDefault();
+    console.log('funkce na přídání CELÉ POLOŽKY do datábáze');
+  };
+
   return (
     <>
       <div className="formcontainer">
@@ -12,8 +21,15 @@ const Form = () => {
           <input type="text" placeholder="date of purchase" />
           <input type="text" placeholder="reminder date" />
           <input type="text" placeholder="note" />
-          <img src={pdficon} alt="add-pdf" />
-          <button className="">add item</button>
+          <img
+            onClick={handleAddAttachment}
+            className="attachment-icon"
+            src={attachmentIcon}
+            alt="add-pdf"
+          />
+          <button onClick={handleAddItem} className="button-add-item">
+            add item
+          </button>
         </form>
         <button className="close"></button>
       </div>

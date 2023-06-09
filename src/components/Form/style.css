@@ -35,6 +35,18 @@
 
 }
 
+.attachment-icon {
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.button-add-item {
+  cursor: pointer;
+}
+
 .close {
   position: absolute;
   width: 25px;
