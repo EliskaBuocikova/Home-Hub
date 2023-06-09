@@ -22,15 +22,24 @@
     flex: 0 1 25rem;
 }
 
+.header__login {
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 
 /* MENU EFFECTS */
 
-.nav__categories, .nav__notifications {
+.nav__categories,
+.nav__notifications {
     text-decoration: none;
     color: white;
 }
 
-.nav__notifications::before  {
+.nav__notifications::before {
     margin-right: 10px;
     content: '[';
     transform: translateX(20px);
@@ -43,7 +52,8 @@
 }
 
 
-.nav__notifications::after, .nav__categories::after {
+.nav__notifications::after,
+.nav__categories::after {
     margin-left: 10px;
     content: ']';
     transform: translateX(-20px);

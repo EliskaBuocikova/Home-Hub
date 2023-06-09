@@ -12,13 +12,14 @@ const Header = () => {
           <Link className="nav__categories" to="/categories">
             Categories
           </Link>
-          <span> | </span>
           <Link className="nav__notifications" to="/">
             Notifications
           </Link>
         </nav>
       </div>
-      <p className="header__login">login</p>
+      <Link className="header__login" to="/login">
+        login
+      </Link>
     </header>
   );
 };
