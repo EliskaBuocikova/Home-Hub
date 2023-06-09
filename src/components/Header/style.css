@@ -25,44 +25,44 @@
 
 /* MENU EFFECTS */
 
-.nav__categories, .nav__notifications {
+.nav__categories,
+.nav__notifications {
     text-decoration: none;
     color: white;
 }
 
-.nav__notifications::before  {
-    margin-right: 10px;
-    content: '[';
-    transform: translateX(20px);
+.nav__categories::before,
+.nav__categories::after {
+
+    opacity: 1;
+    transform: translateX(0px);
+
 }
 
-.nav__categories::before {
-    margin-right: 10px;
-    content: '[';
-    transform: translateX(20px);
+.nav__notifications::before,
+.nav__notifications::after {
+
+    opacity: 1;
+    transform: translateX(0px);
 }
 
 
-.nav__notifications::after, .nav__categories::after {
+.nav__notifications:hover::after,
+.nav__categories:focus::after,
+.nav__categories:hover::after,
+.nav__notifications:focus::after {
     margin-left: 10px;
     content: ']';
     transform: translateX(-20px);
 }
 
 .nav__notifications:hover::before,
-.nav__notifications:hover::after,
-.nav__notifications:focus::before,
-.nav__notifications:focus::after {
-    opacity: 1;
-    transform: translateX(0px);
-}
-
 .nav__categories:hover::before,
-.nav__categories:hover::after,
-.nav__categories:focus::before,
-.nav__categories:focus::after {
-    opacity: 1;
-    transform: translateX(0px);
+.nav__notifications:focus::before,
+.nav__categories:focus::before {
+    margin-right: 10px;
+    content: '[';
+    transform: translateX(20px);
 }
 
 @media screen and (max-width: 699px) {

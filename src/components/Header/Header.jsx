@@ -9,12 +9,12 @@ const Header = () => {
       <img className="header__logo" src={logoWhite} alt="home_icon"></img>
       <div className="header__nav">
         <nav className="header__menu">
-          <Link className="nav__categories" to="/categories">
-            Categories
+          <Link className="link__ nav__notifications" to="/">
+            Notifications
           </Link>
           <span> | </span>
-          <Link className="nav__notifications" to="/">
-            Notifications
+          <Link className="nav__categories" to="/categories">
+            Categories
           </Link>
         </nav>
       </div>
