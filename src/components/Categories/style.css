@@ -42,13 +42,14 @@
 
     .categories {
         width: 60vw;
-        margin-top: 5rem;
+        margin-top: 0;
     }
 
     .category {
         width: 25rem;
         padding: 1rem;
     }
+
 
     /* .categories {
         display: grid;

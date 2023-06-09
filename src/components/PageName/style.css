@@ -7,12 +7,11 @@
   margin: 0;
   height: 3rem;
   line-height: 2rem;
-  position: sticky;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: normal;
   font-size: 0.75rem;
-  align-self: start;
+
 }
 
 .pageName h1 {
@@ -20,3 +19,12 @@
   padding: 0.5rem;
 }
 
+@media screen and (min-width: 700px) {
+  
+  .pageName {
+    width: 60vw;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+}
