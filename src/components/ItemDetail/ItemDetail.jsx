@@ -18,9 +18,10 @@ const ItemDetail = ({ name }) => {
     return (
       <div className={`modal ${isOpen ? 'open' : ''}`}>
         <div className="modal-content">
-          <p>{`Opravdu chcete položku ${name} smazat?`}</p>
-          <button onClick={onClose}>Cancel</button>
-          <button onClick={onDelete}>Delete</button>
+          <p>{`
+          Do you really want to delete the item ${name}?`}</p>
+          <button onClick={onClose}>cancel</button>
+          <button onClick={onDelete}>delete</button>
         </div>
       </div>
     );
