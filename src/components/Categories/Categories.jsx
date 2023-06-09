@@ -14,48 +14,48 @@ const Categories = () => {
     <>
       <Banner />
       <PageName title={'Categories'} />
-      <div className="categories">
-        <Link className="category" id="appliances" to="/itemlist">
-          <img
-            className="icon__appliances"
-            src={appliancesIcon}
-            alt="appliances_icon"
-          ></img>
-          Appliances
-        </Link>
+        <div className="categories">
+          <Link className="category" id="appliances" to="/itemlist">
+            <img
+              className="icon__appliances"
+              src={appliancesIcon}
+              alt="appliances_icon"
+            ></img>
+            Appliances
+          </Link>
 
-        <Link className="category" id="electronics" to="/itemlist">
-          <img
-            className="icon__electronics"
-            src={electronicsIcon}
-            alt="electronics_icon"
-          ></img>
-          Electronics
-        </Link>
+          <Link className="category" id="electronics" to="/itemlist">
+            <img
+              className="icon__electronics"
+              src={electronicsIcon}
+              alt="electronics_icon"
+            ></img>
+            Electronics
+          </Link>
 
-        <Link className="category" id="car" to="/itemlist">
-          <img className="icon__car" src={carIcon} alt="car_icon"></img>
-          Car
-        </Link>
+          <Link className="category" id="car" to="/itemlist">
+            <img className="icon__car" src={carIcon} alt="car_icon"></img>
+            Car
+          </Link>
 
-        <Link className="category" id="wallet" to="/itemlist">
-          <img
-            className="icon__wallet"
-            src={walletIcon}
-            alt="wallet_icon"
-          ></img>
-          Wallet
-        </Link>
+          <Link className="category" id="wallet" to="/itemlist">
+            <img
+              className="icon__wallet"
+              src={walletIcon}
+              alt="wallet_icon"
+            ></img>
+            Wallet
+          </Link>
 
-        <Link className="category" id="others" to="/itemlist">
-          <img
-            className="icon__others"
-            src={othersIcon}
-            alt="others_icon"
-          ></img>
-          Others
-        </Link>
-      </div>
+          <Link className="category" id="others" to="/itemlist">
+            <img
+              className="icon__others"
+              src={othersIcon}
+              alt="others_icon"
+            ></img>
+            Others
+          </Link>
+        </div>
     </>
   );
 };
