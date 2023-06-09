@@ -5,10 +5,9 @@
     justify-content: space-between;
     align-items: center;
     background-color: black;
-    text-align: right;
     color: rgb(228, 228, 228);
     text-transform: uppercase;
-    font-weight: bold;
+    font-size: 1.25rem;
     padding: 0 2rem;
 }
 
@@ -16,10 +15,12 @@
     width: 3rem;
 }
 
-.header__nav {
-    display: flex;
-    justify-content: space-around;
-    flex: 0 1 25rem;
+.header__menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    width: 25rem;
+    gap: 1rem;
 }
 
 .header__login {
@@ -41,36 +42,28 @@
 
 .nav__categories::before,
 .nav__categories::after {
-
     opacity: 1;
-    transform: translateX(0px);
-
 }
 
 .nav__notifications::before,
 .nav__notifications::after {
-
     opacity: 1;
-    transform: translateX(0px);
 }
 
 
 .nav__notifications:hover::after,
 .nav__categories:focus::after,
 .nav__categories:hover::after,
-.nav__notifications:focus::after {
-    margin-left: 10px;
+.nav__notifications:focus::after { 
     content: ']';
-    transform: translateX(-20px);
 }
+
 
 .nav__notifications:hover::before,
 .nav__categories:hover::before,
 .nav__notifications:focus::before,
-.nav__categories:focus::before {
-    margin-right: 10px;
-    content: '[';
-    transform: translateX(20px);
+.nav__categories:focus::before { 
+    content: '[';  
 }
 
 @media screen and (max-width: 699px) {

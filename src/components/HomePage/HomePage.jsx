@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <>
       <Banner />
-      <PageName title={'Homepage'} />
+      <PageName title={'Reminders'} />
 
       <div class="homepage__container">
         <h2 class="homepage__datetime">Today is Monday, 12 June 2023</h2>
