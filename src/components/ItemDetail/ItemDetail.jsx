@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './style.css';
 import { useEffect } from 'react';
 
-import { getItemDetails } from '../../functions/formItem';
+import { getItemDetails } from '../../apiFunctions/formItem';
 
 getItemDetails().then((Response) => {
   console.log(Response);
