@@ -85,9 +85,16 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
             src={attachmentIcon}
             alt="add-pdf"
           />
-          <button onClick={handleAddItem} className="button-add-item">
-            add item
-          </button>
+          {itemId === undefined ? (
+            <button onClick={handleAddItem} className="button-add-item">
+              add item
+            </button>
+          ) : (
+            <>
+              <button className="button-save">save</button>
+              <button className="button-delete">delete</button>
+            </>
+          )}
         </form>{' '}
         <button className="close"></button>
       </div>

@@ -26,17 +26,19 @@ const CategoryPage = () => {
     return <div></div>;
   }
 
-  const openModal = () => {
-    setShowModal(true);
-  };
 
   const closeModal = () => {
     setShowModal(false);
   };
 
-  const handleNewItem = () => {
+  const handleItemUpdated = () => {
     fetchCategory(categoryId).then(setCategory);
     setShowModal(false);
+  };
+
+  const handleAddItem = () => {
+    setCurrentItemId(undefined);
+    setShowModal(true);
   };
 
   return (
@@ -73,7 +75,7 @@ const CategoryPage = () => {
               <p className="item-list__item-name">{item.name}</p>
             </div>
           ))}
-          <div className="item-list__item" onClick={openModal}>
+          <div className="item-list__item" onClick={handleAddItem}>
             <img
               className="item-list__folder-add-pic"
               src={folderAddIcon}
@@ -96,7 +98,7 @@ const CategoryPage = () => {
           }}
         >
           <Form
-            onItemUpdated={handleNewItem}
+            onItemUpdated={handleItemUpdated}
             categoryId={categoryId}
             itemId={currentItemId}
           />
