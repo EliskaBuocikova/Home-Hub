@@ -3,12 +3,14 @@ import PageName from '../PageName/PageName';
 import folderIcon from '../../img/folder-icon.svg';
 import folderAddIcon from '../../img/folder-add-icon.svg';
 import magnifyingGlassIcon from '../../img/magnifying-glass-icon.png';
+import Banner from '../Banner/Banner';
 import { Link } from 'react-router-dom';
 import './style.css';
 
 const ItemList = ({ name }) => {
   return (
     <>
+      <Banner />
       <PageName title={'...Jméno kategorie...'} />
       <div className="item-list">
         <form>

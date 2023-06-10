@@ -24,6 +24,7 @@
 
 .notification {
     display: grid;
+    justify-items: center;
     grid-template-columns: 1fr 3fr 1fr;
     gap: 1rem;
     align-items: center;
@@ -31,7 +32,7 @@
     border-radius: 5px;
     box-shadow: rgba(16, 13, 22, 0.4) 0 2px 4px,rgba(25, 20, 36, 0.3) 0 7px 13px -3px;
     color: #dcdcdc;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 0.5rem;
 }
 
@@ -51,7 +52,7 @@
 }
 
 .notification__tick {
-    width: 3rem;
+    width: 2rem;
     aspect-ratio: 1/1;
     background-color: rgba(255, 255, 255, 0.332);
     border-radius: 5px;

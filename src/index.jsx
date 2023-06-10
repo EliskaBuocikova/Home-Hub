@@ -12,6 +12,7 @@ import ItemList from './components/ItemList/ItemList.jsx';
 import History from './components/History/History';
 import Form from './components/Form/Form';
 import ItemDetail from './components/ItemDetail/ItemDetail.jsx';
+import { Outlet } from 'react-router-dom';
 
 import './style.css';
 
@@ -19,22 +20,29 @@ const App = () => {
   return (
     <Router>
       <div className="container">
-        <Header />
-
-        <main className="main">
-          <Routes>
-            <Route exact path="/" element={<HomePage />} />
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <main className="main">
+                  <Outlet />
+                </main>
+                <Footer />
+              </>
+            }
+          >
+            <Route index element={<HomePage />} />
             <Route path="/categories" element={<Categories />} />
             <Route path="/itemlist" element={<ItemList />} />
-            <Route path="/login" element={<Login />} />
             <Route path="/homepage" element={<HomePage />} />
             <Route path="/history" element={<History />} />
             <Route path="/form" element={<Form />} />
             <Route path="/itemdetail" element={<ItemDetail />} />
-          </Routes>
-        </main>
-
-        <Footer />
+          </Route>
+        </Routes>
       </div>
     </Router>
   );

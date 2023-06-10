@@ -4,34 +4,21 @@ html {
 
 .item-list {
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
   padding: 3rem 0;
   background-color: #dcdcdc;
   gap: 1rem;
   align-items: center;
   width: 60vw;
-  overflow: hidden;
-  flex-grow: 1;
-}
-
-input {
-  background-color: black;
-  border: none;
-  margin: 3px;
-  width: 250px;
-  height: 2.5rem;
-  border-radius: 5px;
-  padding: 1rem;
-  color: #dcdcdc;
+  display: flex;
+  flex-direction: column;
+  text-align: center; 
 }
 
 .item-list__folders {
   display: flex;
   flex-wrap: wrap;
   row-gap: 1rem;
-  width: 50vw;
+  width: 60vw;
   margin-top: 2rem;
 }
 
@@ -94,10 +81,18 @@ input {
   height: 2.5rem;
   cursor: pointer;
   border-radius: 5px;
-
 }
 
 .magnifying-glass-pic {
-  
   width: 1.5rem;
+}
+
+input {
+  background-color: black;
+  border: none;
+  margin: 3px;
+  height: 2.5rem;
+  border-radius: 5px;
+  padding: 1rem;
+  color: #dcdcdc;
 }
