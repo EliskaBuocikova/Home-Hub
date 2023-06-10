@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import attachmentIcon from '../../img/attachment-icon.svg';
 import './style.css';
- 
 
 const Form = () => {
   const handleAddAttachment = () => {
