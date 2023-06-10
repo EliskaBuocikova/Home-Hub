@@ -1,5 +1,6 @@
 import React from 'react';
 import PageName from '../PageName/PageName';
+import Banner from '../Banner/Banner.jsx';
 import Form from '../Form/Form';
 import folderIcon from '../../img/folder-icon.svg';
 import folderAddIcon from '../../img/folder-add-icon.svg';
@@ -40,6 +41,7 @@ const CategoryPage = () => {
 
   return (
     <>
+      <Banner />
       <PageName title={category.name} />
       <div className="item-list">
         <form>

@@ -27,7 +27,7 @@ const Login = () => {
             log in
           </Link>
         </form>
-        <footer>
+        <div className="registration">
           <p className="login__question">Don't have an account?</p>
           {/* {!showRegister && ( */}
           <p
@@ -42,7 +42,7 @@ const Login = () => {
             </a>
           </p>
           {/* )} */}
-        </footer>
+        </div>
         {/* {showRegister && (
           <form className="registration__form">
             <input type="text" placeholder="user name" />
