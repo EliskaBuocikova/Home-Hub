@@ -30,7 +30,7 @@ const Form = () => {
     insertItem(newItem)
       .then(() => {
         console.log('Položka byla úspěšně vložena do databáze');
-        navigate('/itemlist');
+        navigate(`/category/:categoryId`);
       })
       .catch((error) => {
         console.log('Chyba při vkládání položky do databáze:', error);
@@ -78,7 +78,7 @@ const Form = () => {
             add item
           </button>
         </form>
-        <Link to="/itemlist">
+        <Link to="/category/:categoryId">
           {' '}
           <button className="close"></button>
         </Link>

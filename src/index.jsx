@@ -8,7 +8,7 @@ import Footer from './components/Footer/Footer.jsx';
 import Login from './components/Login/Login.jsx';
 import HomePage from './components/HomePage/HomePage';
 import Categories from './components/Categories/Categories';
-import ItemList from './components/ItemList/ItemList.jsx';
+import CategoryPage from './components/CategoryPage/ItemList.jsx';
 import History from './components/History/History';
 import Form from './components/Form/Form';
 import ItemDetail from './components/ItemDetail/ItemDetail.jsx';
@@ -36,7 +36,7 @@ const App = () => {
           >
             <Route index element={<HomePage />} />
             <Route path="/categories" element={<Categories />} />
-            <Route path="/category/:categoryId" element={<ItemList />} />
+            <Route path="/category/:categoryId" element={<CategoryPage />} />
             <Route path="/homepage" element={<HomePage />} />
             <Route path="/history" element={<History />} />
             <Route path="/form" element={<Form />} />
