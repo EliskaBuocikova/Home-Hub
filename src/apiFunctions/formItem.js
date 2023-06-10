@@ -3,7 +3,7 @@ import { getSupabase } from './supabase.js';
 export const fetchItem = () => {
   const supabase = getSupabase();
 
-  return supabase.from('ItemDetail').select('*');
+  return supabase.from('items').select('*');
 };
 
 export const fetchCategories = () => {
@@ -14,9 +14,26 @@ export const fetchCategories = () => {
     .select('*')
     .then((response) => response.data);
 };
-
-export const insertItem = () => {
+export const fetchCategory = (id) => {
   const supabase = getSupabase();
 
-  return supabase.from('ItemDetail').insert({ id: 1, name: '' });
+  return supabase
+    .from('Categories')
+    .select('*, items(*)')
+    .eq('id', id)
+    .then((response) => response.data[0]);
+};
+
+export const fetchListItem = () => {
+  const supabase = getSupabase();
+  return supabase
+    .from('items')
+    .select('*')
+    .then((response) => response.data);
+};
+
+export const insertItem = (newItem) => {
+  const supabase = getSupabase();
+
+  return supabase.from('items').insert(newItem);
 };

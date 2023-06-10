@@ -25,7 +25,7 @@ const Categories = () => {
           <Link
             key={category.id}
             className={`category icon__${category.name}`}
-            to="/itemlist"
+            to={`/category/${category.id}`}
           >
             <img src={`/img/catIcons/${category.Icon}.png`} />
             {category.name}

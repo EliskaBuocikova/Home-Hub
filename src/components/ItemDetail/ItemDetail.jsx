@@ -128,7 +128,7 @@ const ItemDetail = ({ name }) => {
             name="název"
           />
         </div>
-        <Link to="/itemlist">
+        <Link to="/CategoryPage">
           <button className="close"></button>
         </Link>
       </div>
