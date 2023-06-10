@@ -35,8 +35,6 @@ html {
   height: 100vh;
 }
 
-
-
 input {
   background-color: black;
   border: none;
@@ -56,7 +54,6 @@ input {
     background-color: white;
     text-transform: uppercase;
     border: 1.5px solid #1A1A1A;
-    font-weight: bold;
     border-radius: 5px;
     color: #3B3B3B;
     cursor: pointer;

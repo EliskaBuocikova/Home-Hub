@@ -19,7 +19,7 @@ const Login = () => {
         <div className="login__logo">
           <img className="login__logo" src={logo} />
         </div>
-        <p className="login__text">living seamless</p>
+        <p className="login__text">seamless living</p>
         <form className="login__form">
           <input type="text" placeholder="user name" />
           <input type="text" placeholder="password" />
