@@ -15,8 +15,8 @@ export const fetchCategories = () => {
     .then((response) => response.data);
 };
 
-export const insertItem = () => {
+export const insertItem = (newItem) => {
   const supabase = getSupabase();
 
-  return supabase.from('ItemDetail').insert({ id: 1, name: '' });
+  return supabase.from('ItemDetail').insert(newItem);
 };
