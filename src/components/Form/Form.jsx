@@ -79,7 +79,6 @@ const Form = ({ onNewItem, categoryId }) => {
         </form>{' '}
         <button className="close"></button>
       </div>
-      ;
     </>
   );
 };
