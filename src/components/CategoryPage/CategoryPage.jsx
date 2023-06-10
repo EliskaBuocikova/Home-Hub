@@ -31,6 +31,12 @@ const CategoryPage = () => {
   const closeModal = () => {
     setShowModal(false);
   };
+
+  const handleNewItem = () => {
+    fetchCategory(categoryId).then(setCategory);
+    setShowModal(false);
+  };
+
   return (
     <>
       <PageName title={category.name} />
@@ -83,7 +89,7 @@ const CategoryPage = () => {
             },
           }}
         >
-          <Form />
+          <Form onNewItem={handleNewItem} categoryId={categoryId} />
         </Modal>
       </div>
     </>

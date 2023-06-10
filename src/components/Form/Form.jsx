@@ -5,7 +5,7 @@ import attachmentIcon from '../../img/attachment-icon.svg';
 import './style.css';
 import { insertItem } from '../../apiFunctions/formItem';
 
-const Form = () => {
+const Form = ({ onNewItem, categoryId }) => {
   const [name, setName] = useState('');
   const [dateOfPurchase, setDateOfPurchase] = useState('');
   const [reminderDate, setReminderDate] = useState('');
@@ -24,11 +24,12 @@ const Form = () => {
       dateOfPurchase: dateOfPurchase,
       reminderDate: reminderDate,
       note: note,
+      category_id: categoryId,
     };
 
     insertItem(newItem)
       .then(() => {
-        console.log('Položka byla úspěšně vložena do databáze');
+        onNewItem();
       })
       .catch((error) => {
         console.log('Chyba při vkládání položky do databáze:', error);
@@ -75,11 +76,8 @@ const Form = () => {
           <button onClick={handleAddItem} className="button-add-item">
             add item
           </button>
-        </form>
-        <Link to="/category/:categoryId">
-          {' '}
-          <button className="close"></button>
-        </Link>
+        </form>{' '}
+        <button className="close"></button>
       </div>
       ;
     </>
