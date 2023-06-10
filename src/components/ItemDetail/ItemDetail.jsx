@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 import { useEffect } from 'react';
-import { getItemDetails } from '../../apiFunctions/formItem';
+import { fetchItem } from '../../apiFunctions/formItem';
 import Banner from '../Banner/Banner';
 
-getItemDetails().then((Response) => {
+fetchItem().then((Response) => {
   console.log(Response);
 });
 //tady získáme v konzoli itemy z databáze.
@@ -18,7 +18,7 @@ const ItemDetail = ({ name }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   useEffect(() => {
-    getItemDetails().then((response) => {
+    fetchItem().then((response) => {
       const itemDetails = response.data;
       if (itemDetails.length > 0) {
         const item = itemDetails[0];
