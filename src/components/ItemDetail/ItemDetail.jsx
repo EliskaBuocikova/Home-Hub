@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 import { useEffect } from 'react';
-
 import { getItemDetails } from '../../functions/formItem';
+import Banner from '../Banner/Banner';
 
 getItemDetails().then((Response) => {
   console.log(Response);
@@ -63,6 +63,7 @@ const ItemDetail = ({ name }) => {
 
   return (
     <>
+      <Banner />
       <div className="item-detail__container">
         <form className="boxForm">
           <h2>Item{name}</h2>
