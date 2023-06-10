@@ -11,7 +11,7 @@ html {
   width: 60vw;
   display: flex;
   flex-direction: column;
-  text-align: center; 
+  text-align: center;
 }
 
 .item-list__folders {
@@ -96,3 +96,5 @@ input {
   padding: 1rem;
   color: #dcdcdc;
 }
+
+/*-----------------*/
