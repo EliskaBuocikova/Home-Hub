@@ -98,7 +98,6 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
         </form>{' '}
         <button className="close"></button>
       </div>
-      ;
     </>
   );
 };
