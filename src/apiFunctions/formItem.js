@@ -15,6 +15,14 @@ export const fetchCategories = () => {
     .then((response) => response.data);
 };
 
+export const fetchListItem = () => {
+  const supabase = getSupabase();
+  return supabase
+    .from('ItemDetail')
+    .select('*')
+    .then((response) => response.data);
+};
+
 export const insertItem = (newItem) => {
   const supabase = getSupabase();
 
