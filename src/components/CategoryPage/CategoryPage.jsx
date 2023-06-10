@@ -8,10 +8,12 @@ import './style.css';
 import { fetchCategory } from '../../apiFunctions/formItem';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Modal from 'react-modal'; // Importujte Modal z react-modal
 
 const CategoryPage = () => {
   const { categoryId } = useParams();
   const [category, setCategory] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     fetchCategory(categoryId).then(setCategory);
@@ -21,6 +23,13 @@ const CategoryPage = () => {
     return <div></div>;
   }
 
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
   return (
     <>
       <PageName title={category.name} />
@@ -51,14 +60,36 @@ const CategoryPage = () => {
               <p className="item-list__item-name">{item.name}</p>
             </Link>
           ))}
-          <Link className="item-list__item" to="/form">
+          <div className="item-list__item" onClick={openModal}>
             <img
               className="item-list__folder-add-pic"
               src={folderAddIcon}
-              alt="Folder Add Icon"
+              alt="folder-add"
             />
-          </Link>
+          </div>
         </div>
+        <Modal
+          isOpen={showModal}
+          onRequestClose={closeModal}
+          style={{
+            overlay: {
+              backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            },
+            content: {
+              width: '300px',
+              height: '500px',
+              margin: 'auto',
+            },
+          }}
+        >
+          <h2>New item</h2>
+          <input type="text" placeholder="name" />
+          <input type="text" placeholder="date of purchase" />
+          <input type="text" placeholder="reminder date" />
+          <input type="text" placeholder="note" />
+          <button className="button-add-item">add item</button>
+          <button className="close" onClick={closeModal}></button>
+        </Modal>
       </div>
     </>
   );
