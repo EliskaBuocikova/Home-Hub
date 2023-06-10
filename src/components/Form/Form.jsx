@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import attachmentIcon from '../../img/attachment-icon.svg';
 import './style.css';
-import { insertItem } from '../../apiFunctions/formItem';
+import { fetchItem, insertItem } from '../../apiFunctions/formItem';
 
-const Form = ({ onNewItem, categoryId }) => {
+const Form = ({ onItemUpdated, categoryId, itemId }) => {
   const [name, setName] = useState('');
   const [dateOfPurchase, setDateOfPurchase] = useState('');
   const [reminderDate, setReminderDate] = useState('');
   const [note, setNote] = useState('');
+
+  useEffect(() => {
+    if (itemId === undefined) {
+      return;
+    }
+    fetchItem(itemId).then((item) => {
+      setName(item.name);
+      setDateOfPurchase(item.dateOfPurchase);
+      setReminderDate(item.reminderDate);
+      setNote(item.note);
+    });
+  }, []);
 
   const handleAddAttachment = () => {
     console.log('funkce na přidání PŘÍLOHY');
@@ -29,7 +41,7 @@ const Form = ({ onNewItem, categoryId }) => {
 
     insertItem(newItem)
       .then(() => {
-        onNewItem();
+        onItemUpdated();
       })
       .catch((error) => {
         console.log('Chyba při vkládání položky do databáze:', error);

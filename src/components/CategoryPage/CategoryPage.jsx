@@ -15,11 +15,12 @@ const CategoryPage = () => {
   const { categoryId } = useParams();
   const [category, setCategory] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [currentItemId, setCurrentItemId] = useState(undefined);
 
   useEffect(() => {
     fetchCategory(categoryId).then(setCategory);
   }, []);
-  console.log(category);
+
   if (category === null) {
     return <div></div>;
   }
@@ -54,9 +55,12 @@ const CategoryPage = () => {
         <div className="item-list__folders">
           {' '}
           {category.items.map((item) => (
-            <Link
+            <div
               className="item-list__item"
-              to={`/itemdetail/${item.id}`}
+              onClick={() => {
+                setCurrentItemId(item.id);
+                setShowModal(true);
+              }}
               key={item.id}
             >
               <img
@@ -65,7 +69,7 @@ const CategoryPage = () => {
                 alt="Folder Icon"
               />
               <p className="item-list__item-name">{item.name}</p>
-            </Link>
+            </div>
           ))}
           <div className="item-list__item" onClick={openModal}>
             <img
@@ -89,7 +93,11 @@ const CategoryPage = () => {
             },
           }}
         >
-          <Form onNewItem={handleNewItem} categoryId={categoryId} />
+          <Form
+            onItemUpdated={handleNewItem}
+            categoryId={categoryId}
+            itemId={currentItemId}
+          />
         </Modal>
       </div>
     </>
