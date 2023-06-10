@@ -10,7 +10,6 @@ const Form = () => {
   const [dateOfPurchase, setDateOfPurchase] = useState('');
   const [reminderDate, setReminderDate] = useState('');
   const [note, setNote] = useState('');
-  const navigate = useNavigate();
 
   const handleAddAttachment = () => {
     console.log('funkce na přidání PŘÍLOHY');
@@ -30,7 +29,6 @@ const Form = () => {
     insertItem(newItem)
       .then(() => {
         console.log('Položka byla úspěšně vložena do databáze');
-        navigate(`/category/:categoryId`);
       })
       .catch((error) => {
         console.log('Chyba při vkládání položky do databáze:', error);

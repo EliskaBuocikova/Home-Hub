@@ -1,5 +1,6 @@
 import React from 'react';
 import PageName from '../PageName/PageName';
+import Form from '../Form/Form';
 import folderIcon from '../../img/folder-icon.svg';
 import folderAddIcon from '../../img/folder-add-icon.svg';
 import magnifyingGlassIcon from '../../img/magnifying-glass-icon.png';
@@ -82,13 +83,7 @@ const CategoryPage = () => {
             },
           }}
         >
-          <h2>New item</h2>
-          <input type="text" placeholder="name" />
-          <input type="text" placeholder="date of purchase" />
-          <input type="text" placeholder="reminder date" />
-          <input type="text" placeholder="note" />
-          <button className="button-add-item">add item</button>
-          <button className="close" onClick={closeModal}></button>
+          <Form />
         </Modal>
       </div>
     </>
