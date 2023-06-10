@@ -5,11 +5,6 @@ import { useEffect } from 'react';
 import { fetchItem } from '../../apiFunctions/formItem';
 import Banner from '../Banner/Banner';
 
-fetchItem().then((Response) => {
-  console.log(Response);
-});
-//tady získáme v konzoli itemy z databáze.
-
 const ItemDetail = ({ name }) => {
   const [dateOfPurchase, setDateOfPurchase] = useState('');
   const [reminderDate, setReminderDate] = useState('');
@@ -20,16 +15,15 @@ const ItemDetail = ({ name }) => {
   useEffect(() => {
     fetchItem().then((response) => {
       const itemDetails = response.data;
-      if (itemDetails.length > 0) {
-        const item = itemDetails[0];
+      console.log(Response);
+      if (itemDetails.length > 0);
+      const item = itemDetails[0];
 
-        setDateOfPurchase(item.dateOfPurchase);
-        setReminderDate(item.reminderDate);
-        setNote(item.note);
-      }
+      setDateOfPurchase(item.dateOfPurchase);
+      setReminderDate(item.reminderDate);
+      setNote(item.note);
     });
   }, []);
-  // ue volá funkci getItemDet. která vrací promise. Pokud je promise vyřešeno => then dostaneme response z databáze.
 
   const handleEdit = () => {
     setIsEditable(true);
@@ -69,7 +63,7 @@ const ItemDetail = ({ name }) => {
           <h2>Item{name}</h2>
 
           <label className="item-detail__label">
-            Date of purchase:
+            Date of purchase:{dateOfPurchase}
             <input
               className={`input__date-of-purchase ${
                 isEditable ? 'editable-field' : ''

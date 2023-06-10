@@ -1,9 +1,13 @@
 import { getSupabase } from './supabase.js';
 
-export const fetchItem = () => {
+export const fetchItem = (id) => {
   const supabase = getSupabase();
 
-  return supabase.from('items').select('*');
+  return supabase
+    .from('items')
+    .select('*')
+    .eq('id', id)
+    .then((response) => response.data[0]);
 };
 
 export const fetchCategories = () => {
