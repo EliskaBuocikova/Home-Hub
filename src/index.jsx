@@ -36,7 +36,7 @@ const App = () => {
           >
             <Route index element={<HomePage />} />
             <Route path="/categories" element={<Categories />} />
-            <Route path="/itemlist" element={<ItemList />} />
+            <Route path="/category/:categoryId" element={<ItemList />} />
             <Route path="/homepage" element={<HomePage />} />
             <Route path="/history" element={<History />} />
             <Route path="/form" element={<Form />} />

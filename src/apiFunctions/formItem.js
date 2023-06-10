@@ -14,6 +14,15 @@ export const fetchCategories = () => {
     .select('*')
     .then((response) => response.data);
 };
+export const fetchCategory = (id) => {
+  const supabase = getSupabase();
+
+  return supabase
+    .from('Categories')
+    .select('')
+    .eq('id', id)
+    .then((response) => response.data);
+};
 
 export const fetchListItem = () => {
   const supabase = getSupabase();
