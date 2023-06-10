@@ -46,26 +46,6 @@ input {
   cursor: pointer;
 }
 
-.button-add-item {
-
-  border-radius: 5px;
-  border: 1px solid black;
-  background-color: white;
-  width: 100px;
-  height: 30px;
-  padding: 10px;
-  margin-top: 5px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.button-add-item:hover {
-  background-color: #313134;
-  color: white;
-}
-
 .close {
   position: absolute;
   width: 25px;
@@ -94,4 +74,41 @@ input {
 
 .close::after {
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* BUTTON */
+
+.button-add-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  text-transform: uppercase;
+  border: 1.5px solid #1A1A1A;
+  border-radius: 5px;
+  color: #3B3B3B;
+  cursor: pointer;
+  width: 8rem;
+  height: 3rem;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.button-add-item:disabled {
+  pointer-events: none;
+}
+
+.button-add-item:hover {
+  color: #dcdcdc;
+  background-color: #313134;
+  transform: translateY(-3px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  border: 1px solid #313134;;
+}
+
+.button-add-item:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
