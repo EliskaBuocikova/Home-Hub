@@ -1,5 +1,9 @@
 html {
   box-sizing: border-box;
+  background-image: url("/src/img/banner-desktop.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .login__logo {
@@ -27,11 +31,11 @@ html {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 5rem 0;
+  padding: 4rem 0 1rem;
   background-color: #dcdcdc;
   gap: 1rem;
   align-items: center;
-  width: 60vw;
+  width: 45vw;
   height: 100vh;
 }
 
@@ -49,19 +53,19 @@ input {
 
 .login__button {
   display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    text-transform: uppercase;
-    border: 1.5px solid #1A1A1A;
-    border-radius: 5px;
-    color: #3B3B3B;
-    cursor: pointer;
-    width: 8rem;
-    height: 3rem;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  text-transform: uppercase;
+  border: 1.5px solid #1A1A1A;
+  border-radius: 5px;
+  color: #3B3B3B;
+  cursor: pointer;
+  width: 8rem;
+  height: 3rem;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  margin-top: 1rem;
 }
 
 .login__button:disabled {
@@ -73,7 +77,8 @@ input {
   background-color: #313134;
   transform: translateY(-3px);
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  border: 1px solid #313134;;
+  border: 1px solid #313134;
+  ;
 }
 
 .login__button:active {

@@ -14,7 +14,6 @@ const Login = () => {
 
   return (
     <>
-      <Banner />
       <div className="login">
         <div className="login__logo">
           <img className="login__logo" src={logo} />
