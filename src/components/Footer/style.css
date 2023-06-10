@@ -2,7 +2,9 @@
     grid-area: footer;
     height: 8vh;
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
     justify-content: space-evenly;
     align-items: center;
     background-color: black;
@@ -17,18 +19,20 @@
 
 .icon__home,
 .icon__notifications {
-    width: 2.5rem;
+    width: 2.2rem;
     max-height: 8vh;
 }
 
-.icon__home,
+.icon__home:hover,
 .icon__notifications:hover {
     cursor: pointer;
+    width: 2.5rem;
 }
 
 @media screen and (min-width: 700px) {
     .footer {
-        justify-content: center;
+        grid-template-columns: 1fr;
+        justify-items: center;
     }
 
     .footer__text {
