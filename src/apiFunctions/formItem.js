@@ -9,6 +9,10 @@ export const fetchItem = (id) => {
     .eq('id', id)
     .then((response) => response.data[0]);
 };
+export const deleteItem = (id) => {
+  const supabase = getSupabase();
+  return supabase.from('items').delete().eq('id', id);
+};
 
 export const fetchCategories = () => {
   const supabase = getSupabase();

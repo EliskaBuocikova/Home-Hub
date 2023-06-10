@@ -3,13 +3,15 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import attachmentIcon from '../../img/attachment-icon.svg';
 import './style.css';
-import { fetchItem, insertItem } from '../../apiFunctions/formItem';
+import { deleteItem, fetchItem, insertItem } from '../../apiFunctions/formItem';
 
 const Form = ({ onItemUpdated, categoryId, itemId }) => {
   const [name, setName] = useState('');
   const [dateOfPurchase, setDateOfPurchase] = useState('');
   const [reminderDate, setReminderDate] = useState('');
   const [note, setNote] = useState('');
+  const [isDeleted, setIsDeleted] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   useEffect(() => {
     if (itemId === undefined) {
@@ -46,6 +48,34 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
       .catch((error) => {
         console.log('Chyba při vkládání položky do databáze:', error);
       });
+  };
+  const Modal = ({ isOpen, onClose, onDelete, name }) => {
+    return (
+      <div className={`modal ${isOpen ? 'open' : ''}`}>
+        <div className="modal-content">
+          <p>{`
+          Do you really want to delete the item ${name}?`}</p>
+          <button onClick={onClose}>cancel</button>
+          <button onClick={onDelete}>delete</button>
+        </div>
+      </div>
+    );
+  };
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  const handleDelete = (event) => {
+    deleteItem(itemId).then(() => {
+      setIsDeleted(true);
+      onItemUpdated();
+    });
+    event.preventDefault();
   };
 
   return (
@@ -92,7 +122,15 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
           ) : (
             <>
               <button className="button-save">save</button>
-              <button className="button-delete">delete</button>
+              <button onClick={openModal} className="button-delete">
+                delete
+              </button>
+
+              <Modal
+                isOpen={modalIsOpen}
+                onClose={closeModal}
+                onDelete={handleDelete}
+              />
             </>
           )}
         </form>{' '}

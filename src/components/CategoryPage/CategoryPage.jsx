@@ -26,7 +26,6 @@ const CategoryPage = () => {
     return <div></div>;
   }
 
-
   const closeModal = () => {
     setShowModal(false);
   };
