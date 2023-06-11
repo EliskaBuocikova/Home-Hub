@@ -16,6 +16,7 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
   const [reminderDate, setReminderDate] = useState('');
   const [note, setNote] = useState('');
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     if (itemId === undefined) {
@@ -83,6 +84,10 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
     });
   };
 
+  const closeForm = () => {
+    setShowModal(false);
+  };
+
   return (
     <>
       <div className="formcontainer">
@@ -141,7 +146,7 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
             </>
           )}
         </form>{' '}
-        <button className="close"></button>
+        <button onClick={closeForm} className="close"></button>
       </div>
 
       <div className={`modal ${modalIsOpen ? 'open' : ''}`}>
