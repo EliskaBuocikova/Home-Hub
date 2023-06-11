@@ -4,7 +4,7 @@ import Banner from '../Banner/Banner.jsx';
 import Form from '../Form/Form';
 import folderIcon from '../../img/folder-icon.svg';
 import folderAddIcon from '../../img/folder-add-icon.svg';
-import magnifyingGlassIcon from '../../img/magnifying-glass-icon.png';
+import magnifyingGlassIcon from '../../img/magnifying-glass-icon.svg';
 import { Link } from 'react-router-dom';
 import './style.css';
 import { fetchCategory } from '../../apiFunctions/formItem';
@@ -45,15 +45,11 @@ const CategoryPage = () => {
       <Banner />
       <PageName title={category.name} />
       <div className="item-list">
-        <form>
-          <input type="text" placeholder="search" />
-          <button className="magnifying-glass-icon">
-            <img
-              className="magnifying-glass-pic"
-              src={magnifyingGlassIcon}
-              alt="Magnifying Glass"
-            />
-          </button>
+        <form class="search-container">
+          <div class="search-bar-wrapper">
+              <input type="text" className="search-bar" placeholder="Search"></input>
+              <img src={magnifyingGlassIcon} class="search-icon" alt="magnifying-glas_icon"/>
+            </div>
         </form>
         <div className="item-list__folders">
           {' '}

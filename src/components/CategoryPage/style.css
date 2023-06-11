@@ -65,7 +65,7 @@ html {
 }
 
 /* FORM */
-
+/*
 .item-list form {
   display: flex;
   align-items: center;
@@ -96,5 +96,41 @@ input {
   padding: 1rem;
   color: #dcdcdc;
 }
-
+*/
 /*-----------------*/
+
+/*new form styly*/
+
+.search-container{
+  width: 60vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar-wrapper {
+  position: relative;
+  display: flex;
+}
+
+input.search-bar{
+  margin: 0 auto;
+  width: 25rem;
+  height: 2rem;
+  padding: 1.2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 1.8rem;
+  aspect-ratio: 1/1;
+}
+
+.search-icon:hover{
+  cursor: pointer;
+}
