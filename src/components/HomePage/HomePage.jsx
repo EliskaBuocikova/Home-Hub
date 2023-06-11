@@ -38,6 +38,10 @@ const HomePage = () => {
     fetchReminders().then(setReminders);
   }, []);
 
+  const handleReminderChecked = () => {
+    fetchReminders().then(setReminders);
+  };
+
   return (
     <>
       <Banner />
@@ -52,7 +56,11 @@ const HomePage = () => {
       <div className="notifications__wrapper">
         <div className="notifications">
           {reminders.map((reminder) => (
-            <Reminder key={reminder.id} reminder={reminder} />
+            <Reminder
+              key={reminder.id}
+              reminder={reminder}
+              onReminderChecked={handleReminderChecked}
+            />
           ))}
           <Link className="notifications__history" to="/history">
             History

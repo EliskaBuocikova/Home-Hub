@@ -21,7 +21,6 @@ export const checkReminder = (id) => {
     .from('reminders')
     .update({ checked: true })
     .eq('id', id)
-    .then(() => undefined);
 };
 
 export const updateItem = (id, item) => {
