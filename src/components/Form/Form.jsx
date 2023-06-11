@@ -10,7 +10,6 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
   const [dateOfPurchase, setDateOfPurchase] = useState('');
   const [reminderDate, setReminderDate] = useState('');
   const [note, setNote] = useState('');
-  const [isDeleted, setIsDeleted] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   useEffect(() => {
@@ -49,18 +48,6 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
         console.log('Chyba při vkládání položky do databáze:', error);
       });
   };
-  const Modal = ({ isOpen, onClose, onDelete, name }) => {
-    return (
-      <div className={`modal ${isOpen ? 'open' : ''}`}>
-        <div className="modal-content">
-          <p>{`
-          Do you really want to delete the item ${name}?`}</p>
-          <button onClick={onClose}>cancel</button>
-          <button onClick={onDelete}>delete</button>
-        </div>
-      </div>
-    );
-  };
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -72,7 +59,6 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
 
   const handleDelete = (event) => {
     deleteItem(itemId).then(() => {
-      setIsDeleted(true);
       onItemUpdated();
     });
     event.preventDefault();
@@ -116,25 +102,38 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
             alt="add-pdf"
           />
           {itemId === undefined ? (
-            <button onClick={handleAddItem} className="button-add-item">
+            <button
+              type="button"
+              onClick={handleAddItem}
+              className="button-add-item"
+            >
               add item
             </button>
           ) : (
             <>
-              <button className="button-save">save</button>
-              <button onClick={openModal} className="button-delete">
+              <button type="button" className="button-save">
+                save
+              </button>
+              <button
+                type="button"
+                onClick={openModal}
+                className="button-delete"
+              >
                 delete
               </button>
-
-              <Modal
-                isOpen={modalIsOpen}
-                onClose={closeModal}
-                onDelete={handleDelete}
-              />
             </>
           )}
         </form>{' '}
         <button className="close"></button>
+      </div>
+
+      <div className={`modal ${modalIsOpen ? 'open' : ''}`}>
+        <div className="modal-content">
+          <p>{`
+          Do you really want to delete the item ${name}?`}</p>
+          <button onClick={closeModal}>cancel</button>
+          <button onClick={handleDelete}>delete</button>
+        </div>
       </div>
     </>
   );
