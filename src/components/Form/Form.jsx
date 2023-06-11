@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import attachmentIcon from '../../img/attachment-icon.svg';
 import './style.css';
 import {
   deleteItem,
@@ -31,10 +29,6 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
       setReminderNote(item.reminderNote);
     });
   }, []);
-
-  const handleAddAttachment = () => {
-    console.log('funkce na přidání PŘÍLOHY');
-  };
 
   const handleAddItem = (event) => {
     event.preventDefault();

@@ -5,7 +5,6 @@ import Form from '../Form/Form';
 import folderIcon from '../../img/folder-icon.svg';
 import folderAddIcon from '../../img/folder-add-icon.svg';
 import magnifyingGlassIcon from '../../img/magnifying-glass-icon.svg';
-import { Link } from 'react-router-dom';
 import './style.css';
 import { fetchCategory } from '../../apiFunctions/formItem';
 import { useEffect, useState } from 'react';
@@ -30,11 +29,6 @@ const CategoryPage = () => {
     setShowModal(false);
   };
 
-  const handleAddItem = () => {
-    setCurrentItemId(undefined);
-    setShowModal(true);
-  };
-
   // Funkce na ovládání vyjížděcího okna:
   const openForm = () => {
     setShowModal(true);
@@ -42,6 +36,7 @@ const CategoryPage = () => {
 
   const closeForm = () => {
     setShowModal(false);
+    setCurrentItemId(undefined);
   };
 
   const closeFormOnClickOutside = (event) => {
@@ -110,11 +105,14 @@ const CategoryPage = () => {
           >
             <div className="modal-content">
               <button onClick={closeForm} className="close"></button>
-              <Form
-                onItemUpdated={handleItemUpdated}
-                categoryId={categoryId}
-                itemId={currentItemId}
-              />
+
+              {showModal === true ? (
+                <Form
+                  onItemUpdated={handleItemUpdated}
+                  categoryId={categoryId}
+                  itemId={currentItemId}
+                />
+              ) : null}
             </div>
           </div>
         </div>
