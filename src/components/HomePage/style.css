@@ -16,16 +16,15 @@
     display: grid;
     align-items: center;
     gap: 1rem;
-    padding-top: 2rem;
-    padding-bottom: 5rem;
+    padding: 2rem 1rem 5rem 1rem;
     margin: 0 auto;
 }
 
 .notification {
     display: grid;
-    justify-items: center;
+    text-align: center;
     grid-template-columns: 1fr 3fr 1fr;
-    gap: 5rem;
+    gap: 1.5rem;
     align-items: center;
     background-color: #313134;
     border-radius: 5px;
@@ -38,6 +37,11 @@
 .notification p {
     margin: 0;
 }
+
+.notification__tick-hide, .notification__tick-show {
+    justify-self: end;
+}
+
 /* POLÍČKO NA ODCHECKOVÁNÍ NOTIFIKACÍ*/
 
 .notification__tick-show {
@@ -112,7 +116,6 @@
     .notifications__wrapper {
         width: 60vw;
         background-color: #dcdcdc;
-        ;
         justify-self: center;
     }
 
@@ -123,6 +126,11 @@
 
     .notification {
         width: 25rem;
-        padding: 0.5rem;
+        padding: 1rem;
+    }
+
+    .notifitcation__text {
+        flex-basis: 40%;
+        text-align: center;
     }
 }
