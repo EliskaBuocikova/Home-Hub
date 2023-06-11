@@ -1,15 +1,26 @@
 .notifications__wrapper {
     display: grid;
+} 
+
+.homepage__wrapper {
+    display: grid;
 }
 
 .homepage__container {
     display: grid;
     justify-items: center;
-    margin-top: 2rem;
     background-color: #dcdcdc;
     width: 60vw;
     justify-self: center;
     text-align: center;
+    margin-top: 0;
+}
+
+.homepage__container .pageName {
+    margin-top: 0;
+    align-self: flex-start;
+    flex-basis: 3rem;
+    width: 100vw;
 }
 
 .notifications {
@@ -111,6 +122,17 @@
 
     .homepage__container {
         margin-top: 0;
+    }
+
+    .homepage__wrapper {
+        grid-auto-rows: min-content;
+        margin-top: 2rem;
+    }
+
+    .homepage__wrapper .pageName {
+        margin-top: 0;
+        align-self: end;
+        width: 60vw;
     }
 
     .notifications__wrapper {
