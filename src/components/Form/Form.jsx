@@ -114,12 +114,6 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
             value={note}
             onChange={(event) => setNote(event.target.value)}
           />
-          <img
-            onClick={handleAddAttachment}
-            className="attachment-icon"
-            src={attachmentIcon}
-            alt="add-pdf"
-          />
           {itemId === undefined ? (
             <button
               type="button"

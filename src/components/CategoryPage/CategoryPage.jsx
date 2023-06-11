@@ -93,24 +93,13 @@ const CategoryPage = () => {
         {/* Vyjížděcí okno formuláře: */}
         <div id="myModal" className={className}>
           <div className="modal-content">
-            <div className="formcontainer">
-              <form className="boxForm">
-                <h2>New item</h2>
-                <input type="text" placeholder="name" />
-                <input type="text" placeholder="date of purchase" />
-                <input type="text" placeholder="reminder date" />
-                <input type="text" placeholder="note" />
-                <button className="button-add-item">add item</button>
-              </form>
-              <button className="close"></button>
-            </div>
+            <Form
+              onItemUpdated={handleItemUpdated}
+              categoryId={categoryId}
+              itemId={currentItemId}
+            />
           </div>
         </div>
-        <Form
-          onItemUpdated={handleItemUpdated}
-          categoryId={categoryId}
-          itemId={currentItemId}
-        />
       </div>
     </>
   );
