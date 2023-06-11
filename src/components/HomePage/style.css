@@ -38,6 +38,7 @@
 .notification p {
     margin: 0;
 }
+/* POLÍČKO NA ODCHECKOVÁNÍ NOTIFIKACÍ*/
 
 .notification__tick-show {
     width: 2rem;
@@ -46,6 +47,7 @@
     background-image: url(../../img/tick-icon.svg);
     background-position: center;
     background-size: contain;
+    cursor: pointer;
 }
 
 .notification__tick-hide {
@@ -56,18 +58,20 @@
     background-color: #dcdcdc;
     background-position: center;
     background-size: contain;
+    cursor: pointer;
 }
 
-.notifications__history {
-    justify-self: end;
+.notification__tick-hide:hover {
+    transform: scale(1.1) translateY(.12rem);
 }
 
-/*BUTTON */
+/* HISTORY BUTTON */
 
 .notifications__history {
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-self: end;
     background-color: white;
     text-transform: uppercase;
     border: 1.5px solid #1A1A1A;
