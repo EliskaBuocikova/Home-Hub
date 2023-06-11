@@ -45,7 +45,7 @@ export const fetchCategory = (id) => {
 
 export const fetchReminders = (today) => {
   const supabase = getSupabase();
-  const inWeek = today.add(1, 'week');
+  const inWeek = today.add(2, 'months');
 
   return supabase
     .from('reminders')
