@@ -12,7 +12,7 @@ const Reminder = ({ reminder }) => {
   };
 
   return (
-    <div className="notification" key={reminder.id}>
+    <div className="notification" >
       <p className="notification__date">{reminder.items.reminderDate}</p>
       <p className="notification__text">{reminder.items.note}</p>
       <div

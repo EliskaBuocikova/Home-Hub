@@ -9,7 +9,6 @@ import Reminder from '../Reminder/Reminder';
 
 const HomePage = () => {
   const [reminders, setReminders] = useState([]);
-
   const [date, setDate] = useState('');
 
   useEffect(() => {
@@ -53,7 +52,7 @@ const HomePage = () => {
       <div className="notifications__wrapper">
         <div className="notifications">
           {reminders.map((reminder) => (
-            <Reminder reminder={reminder}> </Reminder>
+            <Reminder key={reminder.id} reminder={reminder} />
           ))}
           <Link className="notifications__history" to="/history">
             History

@@ -17,7 +17,11 @@ export const deleteItem = (id) => {
 export const checkReminder = (id) => {
   const supabase = getSupabase();
   console.log('to jsem já', id);
-  return supabase.from('reminders').update({ checked: true }).eq('id', id);
+  return supabase
+    .from('reminders')
+    .update({ checked: true })
+    .eq('id', id)
+    .then(() => undefined);
 };
 
 export const updateItem = (id, item) => {
