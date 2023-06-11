@@ -39,6 +39,10 @@ const CategoryPage = () => {
     setShowModal(true);
   };
 
+  const closeForm = () => {
+    setShowModal(false);
+  };
+
   let className = 'modal';
   if (showModal === true) {
     className += ' modal-open';
@@ -94,6 +98,7 @@ const CategoryPage = () => {
           {/* Vyjížděcí okno formuláře: */}
           <div id="myModal" className={className}>
             <div className="modal-content">
+              <button onClick={closeForm} className="close"></button>
               <Form
                 onItemUpdated={handleItemUpdated}
                 categoryId={categoryId}
