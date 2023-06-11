@@ -35,12 +35,19 @@ const CategoryPage = () => {
     setShowModal(true);
   };
 
+  // Funkce na ovládání vyjížděcího okna:
   const openForm = () => {
     setShowModal(true);
   };
 
   const closeForm = () => {
     setShowModal(false);
+  };
+
+  const closeFormOnClickOutside = (event) => {
+    if (event.target.id === 'myModal') {
+      setShowModal(false);
+    }
   };
 
   let className = 'modal';
@@ -96,7 +103,11 @@ const CategoryPage = () => {
             </div>
           </div>
           {/* Vyjížděcí okno formuláře: */}
-          <div id="myModal" className={className}>
+          <div
+            onClick={closeFormOnClickOutside}
+            id="myModal"
+            className={className}
+          >
             <div className="modal-content">
               <button onClick={closeForm} className="close"></button>
               <Form
