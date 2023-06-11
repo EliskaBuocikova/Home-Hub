@@ -39,11 +39,23 @@
     margin: 0;
 }
 
-.notification__tick {
+.notification__tick-show {
     width: 2rem;
     aspect-ratio: 1/1;
-    background-color: #dcdcdc;
     border-radius: 5px;
+    background-image: url(../../img/tick-icon.svg);
+    background-position: center;
+    background-size: contain;
+}
+
+.notification__tick-hide {
+    width: 2rem;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    background-image: none;
+    background-color: #dcdcdc;
+    background-position: center;
+    background-size: contain;
 }
 
 .notifications__history {

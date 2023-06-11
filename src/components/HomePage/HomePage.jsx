@@ -47,27 +47,28 @@ const HomePage = () => {
           <div className="notification">
             <p className="notification__date">12.3.</p>
             <p className="notification__text">Záruka pračka</p>
-            <div className="notification__tick"></div>
+            <div className="notification__tick-show">
+            </div>
           </div>
           <div className="notification">
             <p className="notification__date">12.3.</p>
             <p className="notification__text">Záruka pračka</p>
-            <div className="notification__tick"></div>
+            <div className="notification__tick-hide"></div>
           </div>
           <div className="notification">
             <p className="notification__date">12.3.</p>
             <p className="notification__text">Záruka pračka</p>
-            <div className="notification__tick"></div>
+            <div className="notification__tick-hide"></div>
           </div>
           <div className="notification">
             <p className="notification__date">12.3.</p>
             <p className="notification__text">Záruka pračka</p>
-            <div className="notification__tick"></div>
+            <div className="notification__tick-hide"></div>
           </div>
           <div className="notification">
             <p className="notification__date">12.3.</p>
             <p className="notification__text">Záruka pračka</p>
-            <div className="notification__tick"></div>
+            <div className="notification__tick-hide"></div>
           </div>
           <Link className="notifications__history" to="/history">
             History
