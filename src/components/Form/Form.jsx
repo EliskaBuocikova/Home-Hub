@@ -13,8 +13,8 @@ import {
 const Form = ({ onItemUpdated, categoryId, itemId }) => {
   const [name, setName] = useState('');
   const [dateOfPurchase, setDateOfPurchase] = useState('');
-  const [reminderDate, setReminderDate] = useState('');
-  const [note, setNote] = useState('');
+  const [dueDate, setDueDate] = useState('');
+  const [reminderNote, setReminderNote] = useState('');
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   useEffect(() => {
@@ -24,8 +24,8 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
     fetchItem(itemId).then((item) => {
       setName(item.name);
       setDateOfPurchase(item.dateOfPurchase);
-      setReminderDate(item.reminderDate);
-      setNote(item.note);
+      setDueDate(item.dueDate);
+      setReminderNote(item.reminderNote);
     });
   }, []);
 
@@ -40,8 +40,8 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
     const newItem = {
       name: name,
       dateOfPurchase: dateOfPurchase,
-      reminderDate: reminderDate,
-      note: note,
+      dueDate: dueDate,
+      reminderNote: reminderNote,
       category_id: categoryId,
     };
 
@@ -73,8 +73,8 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
     const updatedItem = {
       name: name,
       dateOfPurchase: dateOfPurchase,
-      reminderDate: reminderDate,
-      note: note,
+      dueDate: dueDate,
+      reminderNote: reminderNote,
       category_id: categoryId,
     };
 
@@ -104,15 +104,15 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
           <input
             type="text"
             placeholder="reminder date"
-            value={reminderDate}
-            onChange={(event) => setReminderDate(event.target.value)}
+            value={dueDate}
+            onChange={(event) => setDueDate(event.target.value)}
           />
 
           <input
             type="text"
-            placeholder="note"
-            value={note}
-            onChange={(event) => setNote(event.target.value)}
+            placeholder="reminderNote"
+            value={reminderNote}
+            onChange={(event) => setreminderNote(event.target.value)}
           />
           {itemId === undefined ? (
             <button

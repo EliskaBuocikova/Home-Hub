@@ -43,13 +43,15 @@ export const fetchCategory = (id) => {
     .then((response) => response.data[0]);
 };
 
-export const fetchReminders = () => {
+export const fetchReminders = (today) => {
   const supabase = getSupabase();
+  const inWeek = today.add(1, 'week');
 
   return supabase
     .from('reminders')
     .select('*, items(*)')
     .eq('checked', false)
+    .lt('items.dueDate', inWeek.toISOString())
     .then((response) => response.data);
 };
 
@@ -70,10 +72,13 @@ export const insertItem = (newItem) => {
     .select()
     .then((response) => {
       const item = response.data[0];
-      return supabase.from('reminders').insert({
-        checked: false,
-        itemId: item.id,
-      });
+      return supabase
+        .from('reminders')
+        .insert({
+          checked: false,
+          itemId: item.id,
+        })
+        .then(() => undefined);
     });
   // supabase.from('reminders')});
 };

@@ -6,36 +6,15 @@ import { Link } from 'react-router-dom';
 import './style.css';
 import { fetchReminders } from '../../apiFunctions/formItem';
 import Reminder from '../Reminder/Reminder';
+import dayjs from 'dayjs';
+
+const Today = dayjs();
 
 const HomePage = () => {
   const [reminders, setReminders] = useState([]);
-  const [date, setDate] = useState('');
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          'http://worldtimeapi.org/api/timezone/Europe/Prague',
-        );
-        const data = await response.json();
-        const dateString = new Date(data.datetime.slice(0, 10));
-        const options = {
-          day: 'numeric',
-          month: 'long',
-          year: 'numeric',
-        };
-        const formattedDate = dateString.toLocaleDateString('en-US', options);
-        setDate(formattedDate);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    fetchReminders().then(setReminders);
+    fetchReminders(Today).then(setReminders);
   }, []);
 
   const handleReminderChecked = () => {
@@ -50,7 +29,9 @@ const HomePage = () => {
       <PageName title={'Reminders'} />
 
       <div className="homepage__container">
-        <h2 className="homepage__date">Today is {date}</h2>
+        <h2 className="homepage__date">
+          Today is {Today.format('MMMM DD, YYYY')}
+        </h2>
         <p className="homepage__prompt">
           What's coming up in the next two months?
         </p>
