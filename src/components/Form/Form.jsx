@@ -9,11 +9,14 @@ import {
   insertItem,
   updateItem,
 } from '../../apiFunctions/formItem';
+import dayjs from 'dayjs';
 
 const Form = ({ onItemUpdated, categoryId, itemId }) => {
   const [name, setName] = useState('');
-  const [dateOfPurchase, setDateOfPurchase] = useState('');
-  const [dueDate, setDueDate] = useState('');
+  const [dateOfPurchase, setDateOfPurchase] = useState(
+    dayjs().format('YYYY-MM-DDTHH:mm'),
+  );
+  const [dueDate, setDueDate] = useState(dayjs().format('YYYY-MM-DDTHH:mm'));
   const [reminderNote, setReminderNote] = useState('');
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -95,14 +98,14 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
             onChange={(event) => setName(event.target.value)}
           />
           <input
-            type="text"
+            type="datetime-local"
             placeholder="date of purchase"
             value={dateOfPurchase}
             onChange={(event) => setDateOfPurchase(event.target.value)}
           />
 
           <input
-            type="text"
+            type="datetime-local"
             placeholder="reminder date"
             value={dueDate}
             onChange={(event) => setDueDate(event.target.value)}
@@ -112,7 +115,7 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
             type="text"
             placeholder="reminderNote"
             value={reminderNote}
-            onChange={(event) => setreminderNote(event.target.value)}
+            onChange={(event) => setReminderNote(event.target.value)}
           />
           {itemId === undefined ? (
             <button
