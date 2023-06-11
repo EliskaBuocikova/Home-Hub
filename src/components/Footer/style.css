@@ -28,10 +28,14 @@
     max-height: 8vh;
 }
 
-.icon__home:hover,
-.icon__notifications:hover {
+.icon__home:hover {
     cursor: pointer;
     width: 2.5rem;
+}
+
+.icon__notifications:hover{
+    cursor: pointer;
+    width: 2.8rem;
 }
 
 @media screen and (min-width: 700px) {

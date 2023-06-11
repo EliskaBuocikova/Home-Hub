@@ -15,8 +15,8 @@ const Reminder = ({ reminder, onReminderChecked }) => {
 
   return (
     <div className="notification">
-      <p className="notification__date">{reminder.items.reminderDate}</p>
-      <p className="notification__text">{reminder.items.note}</p>
+      <p className="notification__date">{reminder.items.dueDate}</p>
+      <p className="notification__text">{reminder.items.reminderNote}</p>
       <div
         className={`notification__tick-${isChecked ? 'show' : 'hide'}`}
         onClick={handleChecked}
