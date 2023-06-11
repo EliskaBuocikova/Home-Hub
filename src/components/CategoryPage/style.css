@@ -66,7 +66,7 @@ html {
 
 /* SEARCH BAR */
 
-.search-container{
+.search-container {
   width: 60vw;
   margin: 0 auto;
   display: flex;
@@ -78,14 +78,14 @@ html {
   display: flex;
 }
 
-input.search-bar{
+input.search-bar {
   margin: 0 auto;
   max-width: 20rem;
   height: 2rem;
   padding: 1.2rem;
   font-size: 1rem;
   border-radius: 5px;
-  color:#dcdcdc;
+  color: #dcdcdc;
 }
 
 .search-icon {
@@ -97,9 +97,155 @@ input.search-bar{
   aspect-ratio: 1/1;
 }
 
-.search-icon:hover{
+.search-icon:hover {
   cursor: pointer;
 }
+
+/* Vyskakovací okno:*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-open {
+  display: block;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #dcdcdc;
+  border-radius: 5px;
+  max-width: 20rem;
+  height: 100vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.6s
+}
+
+/* Animace*/
+@-webkit-keyframes animatetop {
+  from {
+    left: -300px;
+    opacity: 0
+  }
+
+  to {
+    left: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    left: -300px;
+    opacity: 0
+  }
+
+  to {
+    left: 0;
+    opacity: 1
+  }
+}
+
+.formcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxForm {
+  height: 50vh;
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 5rem 0;
+}
+
+input {
+  background-color: #313134;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin: 3px;
+  color: #dcdcdc;
+}
+
+.button-add-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  text-transform: uppercase;
+  border: 1.5px solid #1A1A1A;
+  border-radius: 5px;
+  color: #3B3B3B;
+  cursor: pointer;
+  width: 7rem;
+  height: 2rem;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.button-add-item:disabled {
+  pointer-events: none;
+}
+
+.button-add-item:hover {
+  color: #DCDCDC;
+  background-color: #313134;
+  transform: translateY(-3px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  border: 1px solid #313134;
+  ;
+}
+
+.button-add-item:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+/* Křížek pro zavření formuláře*/
+.close {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  background-color: #313134;
+  border-radius: 5px;
+  top: 0.5em;
+  right: 0.5em;
+}
+
+.close::before,
+.close::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background-color: #dcdcdc;
+}
+
+.close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*---------*/
 
 @media screen and (min-width: 700px) {
   input.search-bar {
