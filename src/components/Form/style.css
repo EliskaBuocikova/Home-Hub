@@ -38,6 +38,12 @@
   color: #dcdcdc;
 }
 
+.deleted_item {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+
 .modal-cancel,
 .modal-delete {
   margin: 0 10px;
@@ -49,6 +55,7 @@
   cursor: pointer;
   width: 100px;
   height: 30px;
+  text-transform: uppercase;
 
 }
 
