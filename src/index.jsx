@@ -10,7 +10,6 @@ import HomePage from './components/HomePage/HomePage';
 import Categories from './components/Categories/Categories';
 import CategoryPage from './components/CategoryPage/CategoryPage.jsx';
 import History from './components/History/History';
-import ItemDetail from './components/ItemDetail/ItemDetail.jsx';
 import { Outlet } from 'react-router-dom';
 
 import './style.css';
@@ -38,7 +37,6 @@ const App = () => {
             <Route path="/category/:categoryId" element={<CategoryPage />} />
             <Route path="/homepage" element={<HomePage />} />
             <Route path="/history" element={<History />} />
-            <Route path="/itemdetail" element={<ItemDetail />} />
           </Route>
         </Routes>
       </div>

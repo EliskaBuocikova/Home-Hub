@@ -10,13 +10,12 @@ import './style.css';
 import { fetchCategory } from '../../apiFunctions/formItem';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Modal from 'react-modal'; // Importujte Modal z react-modal
 
 const CategoryPage = () => {
   const { categoryId } = useParams();
   const [category, setCategory] = useState(null);
-  const [showModal, setShowModal] = useState(false);
   const [currentItemId, setCurrentItemId] = useState(undefined);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     fetchCategory(categoryId).then(setCategory);
@@ -25,10 +24,6 @@ const CategoryPage = () => {
   if (category === null) {
     return <div></div>;
   }
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
 
   const handleItemUpdated = () => {
     fetchCategory(categoryId).then(setCategory);
@@ -40,17 +35,34 @@ const CategoryPage = () => {
     setShowModal(true);
   };
 
+  const handleClick = () => {
+    setShowModal(true);
+  };
+
+  let className = 'modal';
+  if (showModal === true) {
+    className += ' modal-open';
+  }
+
   return (
     <>
       <Banner />
       <div className="item-list">
       <PageName title={category.name} />
-      <div className='item-list__wrapper'>
-        <form class="search-container">
-          <div class="search-bar-wrapper">
-              <input type="text" className="search-bar" placeholder="Search"></input>
-              <img src={magnifyingGlassIcon} class="search-icon" alt="magnifying-glas_icon"/>
-            </div>
+      <div className="item-list">
+        <form className="search-container">
+          <div className="search-bar-wrapper">
+            <input
+              type="text"
+              className="search-bar"
+              placeholder="Search"
+            ></input>
+            <img
+              src={magnifyingGlassIcon}
+              className="search-icon"
+              alt="magnifying-glas_icon"
+            />
+          </div>
         </form>
         <div className="item-list__folders">
           {' '}
@@ -71,7 +83,7 @@ const CategoryPage = () => {
               <p className="item-list__item-name">{item.name}</p>
             </div>
           ))}
-          <div className="item-list__item" onClick={handleAddItem}>
+          <div className="item-list__item" onClick={handleClick}>
             <img
               className="item-list__folder-add-pic"
               src={folderAddIcon}
@@ -79,26 +91,27 @@ const CategoryPage = () => {
             />
           </div>
         </div>
-        <Modal
-          isOpen={showModal}
-          onRequestClose={closeModal}
-          style={{
-            overlay: {
-              backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            },
-            content: {
-              width: '300px',
-              height: '500px',
-              margin: 'auto',
-            },
-          }}
-        >
-          <Form
-            onItemUpdated={handleItemUpdated}
-            categoryId={categoryId}
-            itemId={currentItemId}
-          />
-        </Modal>
+        {/* Vyjížděcí okno formuláře: */}
+        <div id="myModal" className={className}>
+          <div className="modal-content">
+            <div className="formcontainer">
+              <form className="boxForm">
+                <h2>New item</h2>
+                <input type="text" placeholder="name" />
+                <input type="text" placeholder="date of purchase" />
+                <input type="text" placeholder="reminder date" />
+                <input type="text" placeholder="note" />
+                <button className="button-add-item">add item</button>
+              </form>
+              <button className="close"></button>
+            </div>
+          </div>
+        </div>
+        <Form
+          onItemUpdated={handleItemUpdated}
+          categoryId={categoryId}
+          itemId={currentItemId}
+        />
       </div>
       </div>
     </>
