@@ -77,7 +77,6 @@ input {
   font-size: 13px;
   margin-top: 2rem;
   flex-grow: 1;
-  padding-top: 8rem;
 }
 
 .login__question {
@@ -113,4 +112,3 @@ p.login__link {
 a.register {
   color: black;
 }
-

@@ -92,6 +92,7 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
             onChange={(event) => setName(event.target.value)}
           />
           <input
+            className="datetime-local"
             type="datetime-local"
             placeholder="date of purchase"
             value={dateOfPurchase}
@@ -99,6 +100,7 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
           />
 
           <input
+            className="datetime-local"
             type="datetime-local"
             placeholder="reminder date"
             value={dueDate}

@@ -57,10 +57,6 @@
   background-color: #dcdcdc;
 }
 
-
-
-
-
 /* -------------- */
 
 .modal {
@@ -149,6 +145,10 @@ input {
   border-radius: 5px;
   margin: 3px;
   color: #dcdcdc;
+}
+
+.datetime-local {
+  padding: 18px;
 }
 
 /* .attachment-icon {
