@@ -49,7 +49,7 @@ export const fetchReminders = (today) => {
 
   return supabase
     .from('reminders')
-    .select('*, items(*)')
+    .select('*, items!inner(*)')
     .eq('checked', false)
     .lt('items.dueDate', inWeek.toISOString())
     .then((response) => response.data);

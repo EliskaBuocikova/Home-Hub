@@ -19,37 +19,37 @@ const HomePage = () => {
 
   const handleReminderChecked = () => {
     setTimeout(() => {
-      fetchReminders().then(setReminders);
+      fetchReminders(Today).then(setReminders);
     }, 500);
   };
 
   return (
     <>
       <Banner />
-      <div className='homepage__wrapper'>
-      <PageName title={'Reminders'} />
-      <div className="homepage__container">
-        <h2 className="homepage__date">
-          Today is {Today.format('MMMM DD, YYYY')}
-        </h2>
-        <p className="homepage__prompt">
-          What's coming up in the next two months?
-        </p>
-      </div>
-      <div className="notifications__wrapper">
-        <div className="notifications">
-          {reminders.map((reminder) => (
-            <Reminder
-              key={reminder.id}
-              reminder={reminder}
-              onReminderChecked={handleReminderChecked}
-            />
-          ))}
-          <Link className="notifications__history" to="/history">
-            History
-          </Link>
+      <div className="homepage__wrapper">
+        <PageName title={'Reminders'} />
+        <div className="homepage__container">
+          <h2 className="homepage__date">
+            Today is {Today.format('MMMM DD, YYYY')}
+          </h2>
+          <p className="homepage__prompt">
+            What's coming up in the next two months?
+          </p>
         </div>
-      </div>
+        <div className="notifications__wrapper">
+          <div className="notifications">
+            {reminders.map((reminder) => (
+              <Reminder
+                key={reminder.id}
+                reminder={reminder}
+                onReminderChecked={handleReminderChecked}
+              />
+            ))}
+            <Link className="notifications__history" to="/history">
+              History
+            </Link>
+          </div>
+        </div>
       </div>
     </>
   );
