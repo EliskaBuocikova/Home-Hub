@@ -1,11 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
+import { updateItem } from '../../apiFunctions/formItem';
+import { checkReminder } from '../../apiFunctions/formItem';
 
 const Reminder = ({ reminder }) => {
   const [isChecked, setIsChecked] = useState(reminder.checked);
 
   const handleChecked = () => {
     setIsChecked(!isChecked);
+    checkReminder(reminder.id);
   };
 
   return (
