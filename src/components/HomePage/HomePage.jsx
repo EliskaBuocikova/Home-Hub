@@ -4,10 +4,12 @@ import PageName from '../PageName/PageName';
 import Banner from '../Banner/Banner.jsx';
 import { Link } from 'react-router-dom';
 import './style.css';
-import { fetchReminder, fetchReminders } from '../../apiFunctions/formItem';
+import { fetchReminders } from '../../apiFunctions/formItem';
+import Reminder from '../Reminder/Reminder';
 
 const HomePage = () => {
   const [reminders, setReminders] = useState([]);
+
   const [date, setDate] = useState('');
 
   useEffect(() => {
@@ -48,17 +50,11 @@ const HomePage = () => {
           What's coming up in the next two months?
         </p>
       </div>
-
       <div className="notifications__wrapper">
         <div className="notifications">
           {reminders.map((reminder) => (
-            <div className="notification" key={reminder.id}>
-              <p className="notification__date">{'10/10/10'}</p>
-              <p className="notification__text">{'myčka'}</p>
-              <div className="notification__tick-show"> </div>
-            </div>
+            <Reminder reminder={reminder}> </Reminder>
           ))}
-
           <Link className="notifications__history" to="/history">
             History
           </Link>

@@ -43,6 +43,7 @@ export const fetchReminders = () => {
   return supabase
     .from('reminders')
     .select('*, items(*)')
+    .eq('checked', false)
     .then((response) => response.data);
 };
 
