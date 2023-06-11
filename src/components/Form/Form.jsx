@@ -143,12 +143,18 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
         </form>{' '}
       </div>
 
-      <div className={`modal ${modalIsOpen ? 'open' : ''}`}>
-        <div className="modal-content">
-          <p>{`
+      <div
+        className={`confirm-window ${modalIsOpen ? 'confirm-window-open' : ''}`}
+      >
+        <div className="modal-box">
+          <p className="modal-question">{`
           Do you really want to delete the item ${name}?`}</p>
-          <button onClick={closeModal}>cancel</button>
-          <button onClick={handleDelete}>delete</button>
+          <button onClick={closeModal} className="modal-cancel">
+            cancel
+          </button>
+          <button onClick={handleDelete} className="modal-delete">
+            delete
+          </button>
         </div>
       </div>
     </>
