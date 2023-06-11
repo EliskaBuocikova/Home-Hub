@@ -39,7 +39,9 @@ const HomePage = () => {
   }, []);
 
   const handleReminderChecked = () => {
-    fetchReminders().then(setReminders);
+    setTimeout(() => {
+      fetchReminders().then(setReminders);
+    }, 500);
   };
 
   return (
