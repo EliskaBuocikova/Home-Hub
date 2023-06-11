@@ -37,6 +37,15 @@ export const fetchCategory = (id) => {
     .then((response) => response.data[0]);
 };
 
+export const fetchReminders = () => {
+  const supabase = getSupabase();
+
+  return supabase
+    .from('reminders')
+    .select('*, items(*)')
+    .then((response) => response.data);
+};
+
 export const fetchListItem = () => {
   const supabase = getSupabase();
   return supabase
