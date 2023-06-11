@@ -84,7 +84,7 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
     <>
       <div className="formcontainer">
         <form className="boxForm">
-          <h2>New item</h2>
+          {itemId === undefined ? <h2>New item</h2> : name}
           <input
             type="text"
             placeholder="name"
