@@ -61,6 +61,7 @@ input {
   align-items: center;
   background-color: white;
   text-transform: uppercase;
+  border: 1.5px solid #1A1A1A;
   border-radius: 5px;
   color: #3B3B3B;
   cursor: pointer;
@@ -113,5 +114,3 @@ a.register {
   color: black;
 }
 
-
-@media screen and (max-width: 699px) {}
