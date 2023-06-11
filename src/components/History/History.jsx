@@ -7,8 +7,8 @@ const History = () => {
   return (
     <>
       <Banner />
-      <PageName title={'Homepage'} />
       <div className="historyBox">
+      <PageName title={'Homepage'} />
         <h2>Moje upomínky</h2>
         <ul>
           <li></li>{' '}

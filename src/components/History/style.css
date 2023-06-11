@@ -2,15 +2,26 @@
   font-family: 'fontPoppin';
 }
 
-
 .historyBox {
-  margin: 0 auto;
-  display: flex;
+  display: grid;
+  align-content: start;
   flex-direction: column;
   text-align: center;
-  padding: 5rem 0;
-  background-color: #ffffff;
+  background-color:#dcdcdc;
   gap: 1rem;
-  align-items: center;
-  width: 60vw;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 700px) {
+
+  .historyBox {
+    margin-top: 2rem;
+    align-content: start;
+  }
+
+  .historyBox .pageName {
+    margin-top: 0;
+    justify-self: flex-start;
+  }
+
 }
