@@ -3,10 +3,9 @@
     align-items: center;
     gap: 1rem;
     background-color: #dcdcdc;
-    padding-top: 4rem;
     padding-bottom: 5rem;
     margin: 0 auto;
-    margin-top: 2rem;
+    
 }
 
 .category {
@@ -43,7 +42,14 @@
 
     .categories {
         width: 60vw;
+        margin-top: 2rem;
+    }
+
+    .categories .pageName {
         margin-top: 0;
+        align-self: flex-start;
+        flex-basis: 3rem;
+        width: 60vw;
     }
 
     .category {

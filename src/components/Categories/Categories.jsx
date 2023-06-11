@@ -19,8 +19,8 @@ const Categories = () => {
   return (
     <>
       <Banner />
-      <PageName title={'Categories'} />
       <div className="categories">
+      <PageName title={'Categories'} />
         {categories.map((category) => (
           <Link
             key={category.id}
