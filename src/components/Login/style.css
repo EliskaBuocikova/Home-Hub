@@ -61,7 +61,6 @@ input {
   align-items: center;
   background-color: white;
   text-transform: uppercase;
-  border: 1.5px solid #1A1A1A;
   border-radius: 5px;
   color: #3B3B3B;
   cursor: pointer;
@@ -76,6 +75,8 @@ input {
 .registration {
   font-size: 13px;
   margin-top: 2rem;
+  flex-grow: 1;
+  padding-top: 8rem;
 }
 
 .login__question {
