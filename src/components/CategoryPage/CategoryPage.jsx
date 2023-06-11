@@ -47,6 +47,7 @@ const CategoryPage = () => {
   return (
     <>
       <Banner />
+      <div className="item-list">
       <PageName title={category.name} />
       <div className="item-list">
         <form className="search-container">
@@ -100,6 +101,7 @@ const CategoryPage = () => {
             />
           </div>
         </div>
+      </div>
       </div>
     </>
   );
