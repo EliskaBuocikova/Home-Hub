@@ -78,7 +78,7 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
       category_id: categoryId,
     };
 
-    updateItem(itemId, updateItem).then(() => {
+    updateItem(itemId, updatedItem).then(() => {
       onItemUpdated();
     });
   };
