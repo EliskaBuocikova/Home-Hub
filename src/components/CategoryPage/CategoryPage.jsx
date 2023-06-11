@@ -43,8 +43,9 @@ const CategoryPage = () => {
   return (
     <>
       <Banner />
-      <PageName title={category.name} />
       <div className="item-list">
+      <PageName title={category.name} />
+      <div className='item-list__wrapper'>
         <form class="search-container">
           <div class="search-bar-wrapper">
               <input type="text" className="search-bar" placeholder="Search"></input>
@@ -98,6 +99,7 @@ const CategoryPage = () => {
             itemId={currentItemId}
           />
         </Modal>
+      </div>
       </div>
     </>
   );

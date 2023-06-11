@@ -2,9 +2,13 @@ html {
   box-sizing: border-box;
 }
 
+.item-list .pageName {
+  width: 100vw;
+}
+
 .item-list {
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 0 0 3rem 0;
   background-color: #dcdcdc;
   gap: 1rem;
   align-items: center;
@@ -68,7 +72,7 @@ html {
 
 .search-container{
   width: 60vw;
-  margin: 0 auto;
+  margin: 2rem auto 0 auto;
   display: flex;
   justify-content: center;
 }
@@ -104,5 +108,17 @@ input.search-bar{
 @media screen and (min-width: 700px) {
   input.search-bar {
     width: 20rem;
+  }
+
+  .item-list .pageName {
+    margin-top: 0;
+    align-self: flex-start;
+    flex-basis: 3rem;
+    width: 60vw;
+}
+
+  .item-list {
+    padding-top: 0;
+    margin-top: 2rem;
   }
 }
