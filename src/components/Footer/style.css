@@ -38,10 +38,12 @@
     .footer {
         grid-template-columns: 1fr;
         justify-items: center;
+        align-content: center;
     }
 
     .footer__text {
         display: block;
+        margin: 0;
     }
 
     .icon__home,

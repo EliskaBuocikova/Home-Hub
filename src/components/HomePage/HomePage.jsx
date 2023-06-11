@@ -47,8 +47,8 @@ const HomePage = () => {
   return (
     <>
       <Banner />
+      <div className='homepage__wrapper'>
       <PageName title={'Reminders'} />
-
       <div className="homepage__container">
         <h2 className="homepage__date">Today is {date}</h2>
         <p className="homepage__prompt">
@@ -68,6 +68,7 @@ const HomePage = () => {
             History
           </Link>
         </div>
+      </div>
       </div>
     </>
   );
