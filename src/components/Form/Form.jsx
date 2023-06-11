@@ -3,7 +3,12 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import attachmentIcon from '../../img/attachment-icon.svg';
 import './style.css';
-import { deleteItem, fetchItem, insertItem } from '../../apiFunctions/formItem';
+import {
+  deleteItem,
+  fetchItem,
+  insertItem,
+  updateItem,
+} from '../../apiFunctions/formItem';
 
 const Form = ({ onItemUpdated, categoryId, itemId }) => {
   const [name, setName] = useState('');
@@ -64,6 +69,20 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
     event.preventDefault();
   };
 
+  const saveUpdateItem = () => {
+    const updatedItem = {
+      name: name,
+      dateOfPurchase: dateOfPurchase,
+      reminderDate: reminderDate,
+      note: note,
+      category_id: categoryId,
+    };
+
+    updateItem(itemId, updatedItem).then(() => {
+      onItemUpdated();
+    });
+  };
+
   return (
     <>
       <div className="formcontainer">
@@ -111,7 +130,11 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
             </button>
           ) : (
             <>
-              <button type="button" className="button-save">
+              <button
+                type="button"
+                onClick={saveUpdateItem}
+                className="button-save"
+              >
                 save
               </button>
               <button

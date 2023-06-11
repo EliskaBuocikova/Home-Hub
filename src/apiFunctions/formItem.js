@@ -14,6 +14,11 @@ export const deleteItem = (id) => {
   return supabase.from('items').delete().eq('id', id);
 };
 
+export const updateItem = (id, item) => {
+  const supabase = getSupabase();
+  return supabase.from('items').update(item).eq('id', id);
+};
+
 export const fetchCategories = () => {
   const supabase = getSupabase();
 
