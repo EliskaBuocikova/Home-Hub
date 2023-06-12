@@ -57,33 +57,4 @@
         padding: 1rem;
     }
 
-
-    /* .categories {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(14vw, 1fr));
-        width: 50vw;
-        align-items: center;
-        gap: 1rem;
-        padding: 5rem 4rem;
-        margin: 0 auto;
-        background-color: rgb(235, 235, 235);
-    }
-
-    .category {
-        display: flex;
-        flex-direction: column;
-        background-color: #313134;
-        border-radius: 5px;
-        border-width: 0;
-        box-shadow: rgba(16, 13, 22, 0.4) 0 2px 4px, rgba(25, 20, 36, 0.3) 0 7px 13px -3px;
-        color: #dcdcdc;
-        font-size: 1.4rem;
-        padding: 1.5rem;
-        width: 15vw;
-        height: auto;
-        justify-self: center;
-        justify-content: center;
-        aspect-ratio: 1/1;
-    } */
-
 }

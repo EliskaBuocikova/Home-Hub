@@ -149,6 +149,7 @@
     .notification {
         width: 25rem;
         padding: 1rem;
+        white-space: nowrap;
     }
 
     .notifitcation__text {
