@@ -17,6 +17,7 @@
   .historyBox {
     margin-top: 2rem;
     align-content: start;
+    border-radius: 5px;
   }
 
   .historyBox .pageName {
