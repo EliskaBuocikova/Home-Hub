@@ -88,6 +88,7 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
           <input
             type="text"
             placeholder="name"
+            maxLength={30}
             value={name}
             onChange={(event) => setName(event.target.value)}
           />
