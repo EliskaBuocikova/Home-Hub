@@ -139,6 +139,7 @@
         width: 60vw;
         background-color: #dcdcdc;
         justify-self: center;
+        border-radius: 0 0 5px 5px;
     }
 
     .notifications {
