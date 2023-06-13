@@ -150,8 +150,9 @@
     .notification {
         width: 25rem;
         padding: 1rem;
-        white-space: nowrap;
     }
+
+    /* white-space: nowrap;*/
 
     .notifitcation__text {
         flex-basis: 40%;
