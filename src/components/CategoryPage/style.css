@@ -20,8 +20,10 @@ html {
 
 .item-list__folders {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  row-gap: 1rem;
+  cursor: pointer;
+  gap: 1rem;
   width: 60vw;
   margin-top: 2rem;
 }
@@ -29,9 +31,19 @@ html {
 .item-list__item {
   display: flex;
   flex-direction: column;
-  cursor: pointer;
   align-items: center;
   flex-basis: calc(100%/3);
+}
+
+.item-list__item-name {
+  width: 6rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.item-list__item-name:hover {
+  cursor: pointer;
+  transform: scale(1.01);
 }
 
 .item-list__folder-pic {
@@ -59,12 +71,9 @@ html {
 .item-list__item-name {
   font-style: normal;
   background-color: #313134;
-  margin-top: 0.1em;
-  margin-bottom: 0.3em;
   color: #dcdcdc;
   border-radius: 5px;
   padding: 0.5rem;
-  width: 4.3rem;
   font-size: 12px;
 }
 
@@ -184,6 +193,8 @@ input {
   color: #dcdcdc;
 }
 
+/*BUTTONY*/
+
 .button-add-item {
   display: flex;
   justify-content: center;
@@ -268,4 +279,8 @@ input {
     margin-top: 2rem;
     border-radius: 5px;
   }
+
+  .item-list__item-name {
+  width: 10rem;
+}
 }
