@@ -42,32 +42,32 @@
 @media screen and (min-width: 700px) {
 
     .nav__categories,
-.nav__notifications {
-    text-decoration: none;
-    color: white;
-}
+    .nav__notifications {
+        text-decoration: none;
+        color: white;
+    }
 
-/* MENU EFFECTS */
+    /* MENU EFFECTS */
 
-.nav__categories::before,
-.nav__categories::after,
-.nav__notifications::before,
-.nav__notifications::after {
-    opacity: 1;
-}
+    .nav__categories::before,
+    .nav__categories::after,
+    .nav__notifications::before,
+    .nav__notifications::after {
+        opacity: 1;
+    }
 
-.nav__notifications:hover::after,
-.nav__categories:focus::after,
-.nav__categories:hover::after,
-.nav__notifications:focus::after { 
-    content: ']';
-}
+    .nav__notifications:hover::after,
+    .nav__categories:focus::after,
+    .nav__categories:hover::after,
+    .nav__notifications:focus::after {
+        content: ']';
+    }
 
-.nav__notifications:hover::before,
-.nav__categories:hover::before,
-.nav__notifications:focus::before,
-.nav__categories:focus::before { 
-    content: '[';  
-}
+    .nav__notifications:hover::before,
+    .nav__categories:hover::before,
+    .nav__notifications:focus::before,
+    .nav__categories:focus::before {
+        content: '[';
+    }
 
 }

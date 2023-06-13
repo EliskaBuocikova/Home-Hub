@@ -110,7 +110,7 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
 
           <input
             type="text"
-            placeholder="reminderNote"
+            placeholder="reminder note"
             maxLength={35}
             value={reminderNote}
             onChange={(event) => setReminderNote(event.target.value)}
