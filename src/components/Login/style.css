@@ -74,9 +74,8 @@ input {
 }
 
 .registration {
-  font-size: 13px;
-  margin-top: 2rem;
-  flex-grow: 1;
+  font-size: 0.813rem;
+  margin-top: auto;
 }
 
 .login__question {
