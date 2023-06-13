@@ -38,13 +38,19 @@ const HomePage = () => {
         </div>
         <div className="notifications__wrapper">
           <div className="notifications">
-            {reminders.map((reminder) => (
-              <Reminder
-                key={reminder.id}
-                reminder={reminder}
-                onReminderChecked={handleReminderChecked}
-              />
-            ))}
+            {reminders.length === 0 ? (
+              <p className="notifications__message">
+                Your schedule is clear for the next two months. 
+              </p>
+            ) : (
+              reminders.map((reminder) => (
+                <Reminder
+                  key={reminder.id}
+                  reminder={reminder}
+                  onReminderChecked={handleReminderChecked}
+                />
+              ))
+            )}
             <Link className="notifications__history" to="/history">
               History
             </Link>
