@@ -32,7 +32,7 @@
 }
 
 
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 699.9px) {
 
     .header__menu {
         display: none;
