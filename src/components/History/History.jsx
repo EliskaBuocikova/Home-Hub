@@ -9,7 +9,7 @@ const History = () => {
       <Banner />
       <div className="historyBox">
       <PageName title={'History'} />
-        <h2>Moje upomínky</h2>
+        <h2>Finished tasks</h2>
       </div>
     </>
   );
