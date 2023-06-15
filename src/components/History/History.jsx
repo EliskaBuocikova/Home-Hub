@@ -8,11 +8,8 @@ const History = () => {
     <>
       <Banner />
       <div className="historyBox">
-      <PageName title={'Homepage'} />
+      <PageName title={'History'} />
         <h2>Moje upomínky</h2>
-        <ul>
-          <li></li>{' '}
-        </ul>
       </div>
     </>
   );
