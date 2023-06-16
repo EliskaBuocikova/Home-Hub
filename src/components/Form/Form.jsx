@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import './style.css';
 import {
   deleteItem,
   fetchItem,
@@ -8,6 +7,7 @@ import {
   updateItem,
 } from '../../apiFunctions/formItem';
 import dayjs from 'dayjs';
+import './style.css';
 
 const Form = ({ onItemUpdated, categoryId, itemId }) => {
   const [name, setName] = useState('');

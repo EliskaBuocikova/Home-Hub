@@ -5,10 +5,10 @@ import Form from '../Form/Form';
 import folderIcon from '../../img/folder-icon.svg';
 import folderAddIcon from '../../img/folder-add-icon.svg';
 import magnifyingGlassIcon from '../../img/magnifying-glass-icon.svg';
-import './style.css';
 import { fetchCategory } from '../../apiFunctions/formItem';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './style.css';
 
 const CategoryPage = () => {
   const { categoryId } = useParams();

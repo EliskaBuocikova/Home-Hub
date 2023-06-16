@@ -1,11 +1,10 @@
 import React from 'react';
-import './style.css';
 import PageName from '../PageName/PageName';
 import Banner from '../Banner/Banner.jsx';
-
 import { Link } from 'react-router-dom';
 import { fetchCategories } from '../../apiFunctions/formItem';
 import { useEffect, useState } from 'react';
+import './style.css';
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
@@ -20,7 +19,7 @@ const Categories = () => {
     <>
       <Banner />
       <div className="categories">
-      <PageName title={'Categories'} />
+        <PageName title={'Categories'} />
         {categories.map((category) => (
           <Link
             key={category.id}

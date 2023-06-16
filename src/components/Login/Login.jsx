@@ -1,9 +1,9 @@
 import React from 'react';
-import './style.css';
 import logo from '../../img/logo-cele-cerne.svg';
 import { Link } from 'react-router-dom';
 import Banner from '../Banner/Banner';
 // import { useState } from 'react';
+import './style.css';
 
 const Login = () => {
   // const [showRegister, setShowRegister] = useState(false);

@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react';
 import PageName from '../PageName/PageName';
 import Banner from '../Banner/Banner.jsx';
 import { Link } from 'react-router-dom';
-import './style.css';
 import { fetchReminders } from '../../apiFunctions/formItem';
 import Reminder from '../Reminder/Reminder';
 import dayjs from 'dayjs';
+import './style.css';
 
 const Today = dayjs();
 
@@ -40,7 +40,7 @@ const HomePage = () => {
           <div className="notifications">
             {reminders.length === 0 ? (
               <p className="notifications__message">
-                Your schedule is clear for the next two months. 
+                Your schedule is clear for the next two months.
               </p>
             ) : (
               reminders.map((reminder) => (

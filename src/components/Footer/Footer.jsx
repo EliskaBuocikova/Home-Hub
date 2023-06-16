@@ -1,8 +1,8 @@
 import React from 'react';
-import './style.css';
 import homeIcon from '../../img/home-icon.png';
 import notificationsIcon from '../../img/notifications-icon.png';
 import { Link } from 'react-router-dom';
+import './style.css';
 
 const Footer = () => {
   return (
