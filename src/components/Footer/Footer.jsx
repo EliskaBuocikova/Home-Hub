@@ -21,6 +21,7 @@ const Footer = () => {
       <p className="footer__text">
         Czechitas, Digitální akademie: Web - jaro 2023
       </p>
+      <p className="footer__source">Icons from https://icons8.com</p>
     </footer>
   );
 };

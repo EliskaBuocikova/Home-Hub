@@ -13,10 +13,9 @@
     letter-spacing: 0.2rem;
 }
 
-.footer__text {
+.footer__text, .footer__source {
     display: none;
 }
-
 
 .icon__notifications {
     width: 2.2rem;
@@ -45,9 +44,13 @@
         align-content: center;
     }
 
-    .footer__text {
+    .footer__text, .footer__source {
         display: block;
         margin: 0;
+    }
+
+    .footer__source {
+        font-size: 0.5rem;
     }
 
     .icon__home,
