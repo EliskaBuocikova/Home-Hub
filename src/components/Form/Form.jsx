@@ -32,7 +32,6 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
 
   const handleAddItem = (event) => {
     event.preventDefault();
-    console.log('funkce na přídání CELÉ POLOŽKY do datábáze');
 
     const newItem = {
       name: name,
@@ -144,6 +143,7 @@ const Form = ({ onItemUpdated, categoryId, itemId }) => {
         </form>{' '}
       </div>
 
+      {/* Potvrzení smazání položky: */}
       <div
         className={`confirm-window ${modalIsOpen ? 'confirm-window-open' : ''}`}
       >

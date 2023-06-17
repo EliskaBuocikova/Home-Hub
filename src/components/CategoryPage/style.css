@@ -77,8 +77,7 @@ html {
   font-size: 12px;
 }
 
-/* SEARCH BAR */
-
+/* Search bar: */
 .search-container {
   width: 60vw;
   margin: 2rem auto 0 auto;
@@ -114,7 +113,7 @@ input.search-bar {
   cursor: pointer;
 }
 
-/* Vyskakovací okno:*/
+/* Vyskakovací okno: */
 .modal {
   display: none;
   position: fixed;
@@ -143,7 +142,7 @@ input.search-bar {
   animation-duration: 0.6s
 }
 
-/* Animace*/
+/* Animace: */
 @-webkit-keyframes animatetop {
   from {
     left: -300px;
@@ -193,7 +192,7 @@ input {
   color: #dcdcdc;
 }
 
-/*BUTTONY*/
+/* Buttony: */
 
 .button-add-item {
   display: flex;
@@ -231,7 +230,7 @@ input {
   transform: translateY(0);
 }
 
-/* Křížek pro zavření formuláře*/
+/* Křížek pro zavření formuláře: */
 .close {
   position: absolute;
   width: 23px;
@@ -262,6 +261,8 @@ input {
 
 /*---------*/
 
+/* Styly pro desktop: */
+
 @media screen and (min-width: 700px) {
   input.search-bar {
     width: 20rem;
@@ -281,6 +282,6 @@ input {
   }
 
   .item-list__item-name {
-  width: 10rem;
-}
+    width: 10rem;
+  }
 }

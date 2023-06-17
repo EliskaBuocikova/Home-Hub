@@ -13,7 +13,8 @@
     letter-spacing: 0.2rem;
 }
 
-.footer__text, .footer__source {
+.footer__text,
+.footer__source {
     display: none;
 }
 
@@ -37,6 +38,7 @@
     width: 2.5rem;
 }
 
+/* Styly pro desktop: */
 @media screen and (min-width: 700px) {
     .footer {
         grid-template-columns: 1fr;
@@ -44,7 +46,8 @@
         align-content: center;
     }
 
-    .footer__text, .footer__source {
+    .footer__text,
+    .footer__source {
         display: block;
         margin: 0;
     }

@@ -1,4 +1,4 @@
-@keyframes shimmering {
+/* @keyframes shimmering {
   0% {
     background-position: -1300px 0;
   }
@@ -6,8 +6,10 @@
   100% {
     background-position: 1300px 0;
   }
-}
+} */
 
+
+/* Okno na potrvzení smazání položky:  */
 .confirm-window {
   display: none;
   position: fixed;
@@ -66,7 +68,7 @@
 
 /* -------------- */
 
-.modal {
+/* .modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -77,13 +79,13 @@
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.5);
-}
+} */
 
-.modal-open {
+/* .modal-open {
   display: block;
-}
+} */
 
-.modal-content {
+/* .modal-content {
   position: relative;
   background-color: #dcdcdc;
   max-width: 20rem;
@@ -91,10 +93,10 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   animation-name: animatetop;
   animation-duration: 0.6s
-}
+} */
 
 /* Animace*/
-@-webkit-keyframes animatetop {
+/* @-webkit-keyframes animatetop {
   from {
     left: -300px;
     opacity: 0
@@ -116,7 +118,7 @@
     left: 0;
     opacity: 1
   }
-}
+} */
 
 .formcontainer {
   display: flex;
@@ -136,20 +138,20 @@
   padding: 5rem 0;
 }
 
-input {
+/* input {
   background-color: #313134;
   padding: 0.5rem;
   border-radius: 5px;
   margin: 3px;
   color: #dcdcdc;
-}
+} */
 
 .datetime-local {
   padding: 18px 18px 18px 0.5rem;
 }
 
 
-/* BUTTONY */
+/* Buttony: */
 .button-add-item,
 .button-save,
 .button-delete {
@@ -192,7 +194,7 @@ input {
   transform: translateY(0);
 }
 
-.close {
+/* .close {
   position: absolute;
   width: 23px;
   height: 23px;
@@ -218,8 +220,9 @@ input {
 
 .close::after {
   transform: translate(-50%, -50%) rotate(-45deg);
-}
+} */
 
+/* Styly pro desktop: */
 @media screen and (min-width: 700px) {
   input.search-bar {
     width: 20rem;

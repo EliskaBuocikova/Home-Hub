@@ -5,7 +5,7 @@
     background-color: #dcdcdc;
     padding-bottom: 3rem;
     margin: 0 auto;
-    
+
 }
 
 .category {
@@ -37,6 +37,8 @@
 .notifications__history {
     text-decoration: none;
 }
+
+/* Styly pro desktop: */
 
 @media screen and (min-width: 700px) {
 
