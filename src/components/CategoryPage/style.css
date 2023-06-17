@@ -39,6 +39,10 @@ html {
   width: 6rem;
   padding: 0.5rem;
   text-align: center;
+  background-color: #313134;
+  color: #dcdcdc;
+  border-radius: 5px;
+  font-size: 12px;
 }
 
 .item-list__item-name:hover {
@@ -66,15 +70,6 @@ html {
 
 .item-list__folder-add-pic:hover {
   transform: scale(1.2);
-}
-
-.item-list__item-name {
-  font-style: normal;
-  background-color: #313134;
-  color: #dcdcdc;
-  border-radius: 5px;
-  padding: 0.5rem;
-  font-size: 12px;
 }
 
 /* Search bar: */
@@ -258,10 +253,6 @@ input {
 .close::after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-
-/*---------*/
-
-/* Styly pro desktop: */
 
 @media screen and (min-width: 700px) {
   input.search-bar {
