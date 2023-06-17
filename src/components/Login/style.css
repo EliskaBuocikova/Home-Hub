@@ -111,3 +111,9 @@ p.login__link {
 a.register {
   color: black;
 }
+
+@media screen and (max-width: 600px) {
+  .login {
+    width: 70vw;
+  }
+}
