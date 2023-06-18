@@ -11,10 +11,12 @@
     flex-grow: 1;
 }
 
+/* Styly pro desktop: */
 @media screen and (min-width: 700px) {
 
-    .banner,
-    .siteName {
+    .banner {
         display: none;
     }
 }
+
+

@@ -19,8 +19,9 @@
   padding: 0.5rem;
 }
 
+/* Styly pro desktop: */
 @media screen and (min-width: 700px) {
-  
+
   .pageName {
     width: 60vw;
     margin: 0 auto;

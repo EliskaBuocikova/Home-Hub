@@ -1,6 +1,6 @@
 .notifications__wrapper {
     display: grid;
-} 
+}
 
 .homepage__wrapper {
     display: grid;
@@ -55,7 +55,8 @@
     margin: 0;
 }
 
-.notification__tick-hide, .notification__tick-show {
+.notification__tick-hide,
+.notification__tick-show {
     justify-self: end;
 }
 
@@ -124,6 +125,7 @@
     transform: translateY(0);
 }
 
+/* Styly pro desktop: */
 @media screen and (min-width: 700px) {
 
     .homepage__container {

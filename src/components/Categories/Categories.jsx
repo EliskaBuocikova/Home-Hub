@@ -13,8 +13,6 @@ const Categories = () => {
     fetchCategories().then(setCategories);
   }, []);
 
-  console.log(categories);
-  console.log(categories.icon);
   return (
     <>
       <Banner />
