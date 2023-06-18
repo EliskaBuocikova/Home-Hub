@@ -12,13 +12,13 @@
     display: grid;
     grid-template-columns: 20% 50%;
     align-items: center;
+    justify-self: center;
     background-color: #313134;
     border-radius: 5px;
     box-shadow: rgba(16, 13, 22, 0.4) 0 2px 4px, rgba(25, 20, 36, 0.3) 0 7px 13px -3px;
     color: #dcdcdc;
     font-size: 1rem;
     padding: 0.8rem;
-    justify-self: center;
     width: 20rem;
     text-decoration: none;
     gap: 1rem;
