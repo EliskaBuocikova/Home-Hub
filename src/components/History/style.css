@@ -5,7 +5,6 @@
 .historyBox {
   display: grid;
   align-content: start;
-  flex-direction: column;
   text-align: center;
   background-color:#dcdcdc;
   gap: 1rem;
