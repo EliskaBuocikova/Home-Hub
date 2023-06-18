@@ -31,7 +31,7 @@
     text-decoration: none;
 }
 
-
+/* Styly pro mobil: */
 @media screen and (max-width: 699.9px) {
 
     .header__menu {
@@ -39,6 +39,7 @@
     }
 }
 
+/* Styly pro desktop: */
 @media screen and (min-width: 700px) {
 
     .nav__categories,

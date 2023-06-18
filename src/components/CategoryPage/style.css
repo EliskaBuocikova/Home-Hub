@@ -162,23 +162,6 @@ input.search-bar {
   }
 }
 
-.formcontainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.boxForm {
-  height: 50vh;
-  width: 40vw;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 5rem 0;
-}
-
 input {
   background-color: #313134;
   padding: 0.5rem;
@@ -187,8 +170,36 @@ input {
   color: #dcdcdc;
 }
 
-/* Buttony: */
+/* Křížek pro zavření formuláře: */
+.close {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  background-color: #313134;
+  border-radius: 5px;
+  top: 0.5em;
+  right: 0.5em;
+}
 
+.close::before,
+.close::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background-color: #dcdcdc;
+}
+
+.close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Buttony: */
 .button-add-item {
   display: flex;
   justify-content: center;
@@ -225,35 +236,8 @@ input {
   transform: translateY(0);
 }
 
-/* Křížek pro zavření formuláře: */
-.close {
-  position: absolute;
-  width: 23px;
-  height: 23px;
-  cursor: pointer;
-  background-color: #313134;
-  border-radius: 5px;
-  top: 0.5em;
-  right: 0.5em;
-}
 
-.close::before,
-.close::after {
-  content: '';
-  position: absolute;
-  width: 12px;
-  height: 2px;
-  background-color: #dcdcdc;
-}
-
-.close::before {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.close::after {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-
+/* Styly pro desktop: */
 @media screen and (min-width: 700px) {
   input.search-bar {
     width: 20rem;

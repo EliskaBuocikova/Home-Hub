@@ -7,11 +7,12 @@
   align-content: start;
   flex-direction: column;
   text-align: center;
-  background-color:#dcdcdc;
+  background-color: #dcdcdc;
   gap: 1rem;
   margin: 0 auto;
 }
 
+/* Styly pro desktop: */
 @media screen and (min-width: 700px) {
 
   .historyBox {

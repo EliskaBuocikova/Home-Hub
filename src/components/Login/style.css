@@ -112,6 +112,8 @@ a.register {
   color: black;
 }
 
+/* Styly pro menší telefony: */
+
 @media screen and (max-width: 600px) {
   .login {
     width: 70vw;
